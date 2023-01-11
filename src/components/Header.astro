@@ -1,0 +1,30 @@
+---
+import DiscordIcon from "./icons/DiscordIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import TwitterIcon from "./icons/TwitterIcon.astro";
+import SocialButton from "./SocialButton.astro";
+import Twemoji from "./Twemoji.astro";
+
+---
+
+<div class={"container mt-16 justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full pt-52 lg:pt-16"}>
+    <div class={"lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36"}>
+        <h1 class={"font-bold text-7xl lg:text-9xl text-center md:text-left"}>Exerra</h1><br/>
+
+        <h3 class={"font-bold text-2xl lg:text-3xl text-center md:text-left"}>Full-stack developer <span class={"opacity-40 animate-pulse"}>•</span> Latvia</h3><br/>
+
+        <div class="bg-theme text-gray-400 font-bold text-center items-center md:text-left fill-blue-400 space-x-5">
+            <SocialButton href={"https://twitter.com/Exerra"} label={"Link to twitter"}>
+                <TwitterIcon size={48} />
+            </SocialButton>
+
+            <SocialButton href={"https://github.com/Exerra"} label={"Link to github"}>
+                <GithubIcon size={48} />
+            </SocialButton>
+
+            <SocialButton href={"https://guild.exerra.xyz"} label={"Link to my discord server"}>
+                <DiscordIcon size={48} />
+            </SocialButton>
+        </div>
+    </div>
+</div>
