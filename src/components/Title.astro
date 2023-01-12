@@ -2,6 +2,6 @@
 const { hasSubheading } = Astro.props
 ---
 
-<h2 class={`text-5xl font-bold pb-${hasSubheading ? "3" : "10"}`}>
+<h2 class={`text-4xl md:text-6xl lg:text-7xl font-bold ${hasSubheading ? "mb-3" : "mb-8"}`}>
     <slot />
 </h2>

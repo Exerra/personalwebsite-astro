@@ -7,6 +7,8 @@ import Section from '../components/Section.astro';
 import Twemoji from '../components/Twemoji.astro';
 import getNPMPackages from '../util/npm';
 import ProjectCard from '../components/ProjectCard.astro';
+import AboutCard from '../components/AboutCard.astro';
+import ProjectsTitle from '../components/small/ProjectsTitle.astro';
 
 
 const npm = await getNPMPackages()
@@ -61,74 +63,144 @@ let work = [
 let knowledge = [
 	{
 		type: "Language",
-		name: "HTML"
+		name: "HTML",
+		used: "write the elements in a website"
 	},
 	{
 		type: "Language",
-		name: "CSS"
+		name: "CSS",
+		used: "write the style a website"
 	},
 	{
 		type: "Language",
-		name: "Javascript"
+		name: "Javascript",
+		used: "write the interactive parts of a website"
 	},
 	{
 		type: "Superset",
-		name: "Typescript"
+		name: "Typescript",
+		used: "create applications with more safety than Javascript"
 	},
 	{
 		type: "Framework",
-		name: "NodeJS"
+		name: "NodeJS",
+		used: "write the server code with Javascript"
 	},
 	{
 		type: "Language",
-		name: "Swift"
+		name: "Swift",
+		used: "write native apps for the various OS's by Apple"
 	},
 	{
 		type: "Framework",
-		name: "React"
+		name: "React",
+		used: "create highly-interactive web apps"
 	},
 	{
 		type: "Framework",
-		name: "Express"
+		name: "Express",
+		used: "create APIs"
 	},
 ]
 
 ---
 
 <Layout title="Exerra" description={`A full-stack developer from Latvia with ${dates.startedWebDev} of experience as a developer.`}>
-	<div style={{ backgroundImage: `url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='893' viewBox='0 0 1920 893' fill='none'%3E%3Cg filter='url(%23filter0_f)'%3E%3Cellipse cx='630' cy='474.072' rx='510' ry='218.52' fill='%23CCF2FF'%3E%3C/ellipse%3E%3C/g%3E%3Cg filter='url(%23filter1_f)'%3E%3Cellipse cx='1290' cy='474.072' rx='510' ry='218.52' fill='%23E6FFCC'%3E%3C/ellipse%3E%3C/g%3E%3Cg filter='url(%23filter2_f)'%3E%3Cellipse cx='1468.95' cy='371.297' rx='331.053' ry='171.297' fill='%23FFE6EE'%3E%3C/ellipse%3E%3C/g%3E%3Cg filter='url(%23filter3_f)'%3E%3Cellipse cx='449.895' cy='371.297' rx='329.895' ry='171.297' fill='%23EEE6FF'%3E%3C/ellipse%3E%3C/g%3E%3Cg filter='url(%23filter4_f)'%3E%3Cellipse cx='960' cy='538.888' rx='580' ry='142.594' fill='%23FFEECC'%3E%3C/ellipse%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f' x='-80' y='55.5518' width='1420' height='837.04' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'%3E%3C/feFlood%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'%3E%3C/feBlend%3E%3CfeGaussianBlur stdDeviation='100' result='effect1_foregroundBlur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3Cfilter id='filter1_f' x='580' y='55.5518' width='1420' height='837.04' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'%3E%3C/feFlood%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'%3E%3C/feBlend%3E%3CfeGaussianBlur stdDeviation='100' result='effect1_foregroundBlur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3Cfilter id='filter2_f' x='937.895' y='0' width='1062.11' height='742.595' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'%3E%3C/feFlood%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'%3E%3C/feBlend%3E%3CfeGaussianBlur stdDeviation='100' result='effect1_foregroundBlur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3Cfilter id='filter3_f' x='-80' y='0' width='1059.79' height='742.595' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'%3E%3C/feFlood%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'%3E%3C/feBlend%3E%3CfeGaussianBlur stdDeviation='100' result='effect1_foregroundBlur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3Cfilter id='filter4_f' x='180' y='196.294' width='1560' height='685.188' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'%3E%3C/feFlood%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'%3E%3C/feBlend%3E%3CfeGaussianBlur stdDeviation='100' result='effect1_foregroundBlur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E ")` }} class={"h-screen bg-no-repeat bg-cover"}>
+	<div class={"h-screen"}>
 		<Navbar />
-		<Header />
+		<header class="grid lg:grid-cols-2 mt-16 pt-52 lg:pt-16">
+			<div>
+				<Header />
+			</div>
+			<div class="my-auto ml-auto hidden lg:block">
+				<img src="/1.png" height={600} width={600} />
+			</div>
+		</header>
 	</div>
 
 	<Section name="About me">
 		<div class={"flex flex-wrap gap-6 transition ease-in-out"}>
-			<div class={"w-full basis-1/1 grow lg:basis-1/3 shadow-2xl bg-white rounded-lg p-10"}>
-				<h2 class="text-3xl font-bold">Bio 🤔</h2>
-				<p class="text-lg">
-					I am a full-stack developer from
-					<a
-						href="https://www.latvia.travel/en"
-						target={"_blank"}
-						class={"inline-flex transition duration-150 ease-in-out text-red-800 decoration-red-800 font-bold link link-underline link-underline-black"}
-					>
-						Latvia&nbsp;
-						<Twemoji emoji={"🇱🇻"} />
-					</a>&nbsp;with {dates.startedWebDev} years of experience as a web developer and {dates.startedFullStackDev} years as a full-stack developer</p>
-			</div>
+			<AboutCard title="Bio">
+				I am a full-stack developer from
+				<a
+					href="https://www.latvia.travel/en"
+					target={"_blank"}
+					class={"inline-flex transition duration-150 ease-in-out font-bold link link-underline link-underline-black"}
+				>Latvia
+				</a>&nbsp;with {dates.startedWebDev} years of experience as a web developer and {dates.startedFullStackDev} years as a full-stack developer.
+				I have also won <b>first place</b> in a <b>country-wide hackathon</b>.
+			</AboutCard>
 
-			<div class={"w-full basis-1/1 grow lg:basis-1/3 shadow-2xl bg-white rounded-lg p-10"}>
-				<h2 class="text-3xl font-bold">Education 🎓️</h2>
-				<p class="text-lg">I am entirely self-taught from various resources, friends and massive amounts of StackOverflow</p>
-			</div>
+			<AboutCard title="Education">
+				I am entirely self-taught from various resources, friends and massive amounts of StackOverflow
+			</AboutCard>
 
-			<div class={"w-full basis-1/1 grow lg:basis-1/3 shadow-2xl bg-white rounded-lg p-10"}>
-				<h2 class="text-3xl font-bold">Hobbies 🎮️️</h2>
-				<p class="text-lg">Apart from coding itself, I also enjoy playing various video games & playing the saxophone 🎷</p>
-			</div>
+			<AboutCard title="Hobbies">
+				I have a professional education in music, so I also like to play the saxophone & piano sometimes. So far I haven't released any music, but who knows, that might change soon. Apart from music, I also enjoy playing video games (mostly stealth games and RPGs (Bethesda ones especially)).
+			</AboutCard>
 		</div>
 	</Section>
 
+	<section class="bg-black mt-52 pb-12 md:pb-24 lg:pb-36 rounded-tl-[90px] rounded-br-[90px] text-beige text-left">
+		<div class="grid md:grid-cols-1 lg:grid-cols-2">
+			<div class={`mt-12 mx-8 mb-12 md:mt-24 md:mx-24 lg:mb-0 lg:mt-52 lg:ml-52 lg:mr-0`}>
+				<h2 class="font-bold text-4xl md:text-6xl lg:text-8xl">My projects</h2>
+				<p class="mt-10 text-3xl">
+					I've built things ranging from NPM packages, websites, apps, APIs and more.
+					<b>Here are a few of my favourite projects & my NPM packages</b>.
+				</p>
+			</div>
+			<div class="hidden lg:block ml-auto">
+				<img src="/2.png" height={700} width={700} class="h-[400px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px]" />
+			</div>
+		</div>
+
+		<section class="mt-12 mx-8 mb-12 md:mx-24 lg:mx-52">
+			<div>
+				<h3 class="font-bold text-3xl md:text-5xl lg:text-6xl mb-12">Websites & APIs</h3>
+				<div class={"flex flex-wrap gap-7 text-left"}>
+					{work.map(({ date, name, description, url }) => (
+						<ProjectCard 
+							date={date} 
+							name={name} 
+							description={description} 
+							href={url} 
+							label={"Visit the project"} 
+						/>
+					))}
+				</div>
+			</div>
+
+			<div class="mt-24">
+				<h3 class="font-bold text-3xl md:text-5xl lg:text-6xl mb-12">NPM packages</h3>
+				<div class={"flex flex-wrap gap-7 text-left"}>
+					{npm.packages.objects.map(({ created, name, description }) => (
+						<ProjectCard 
+							date={new Date(created.ts).getFullYear()} 
+							name={name} 
+							description={description} 
+							href={`https://npmjs.com/package/${name}`} 
+							label={"Visit the project"} 
+						/>
+					))}
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<Section name="Knowledge">
+		<div class={"flex gap-6 flex-wrap"}>
+			{knowledge.map(knowledge => (
+				<div class={"w-full basis-1/3 grow lg:basis-1/5 shadow-2xl bg-grey-card text-beige rounded-[35px] p-6"}>
+					<h2 class="text-3xl font-bold">{knowledge.name}</h2>
+					<hr class="border-2 border-beige rounded-xl my-2" />
+					<h3 class={"text-xl font-bold"}>{knowledge.type} used in development to {knowledge.used}</h3>
+				</div>
+			))}
+		</div>
+	</Section>
+
+	<!--
 	<Section name={"Projects"}>
 		<div class={"flex flex-wrap gap-6"}>
 			{work.map(({ date, name, description, url }) => (
@@ -168,6 +240,7 @@ let knowledge = [
 			))}
 		</div>
 	</Section>
+	-->
 </Layout>
 <style is:global>
 	.link-underline {
@@ -180,7 +253,7 @@ let knowledge = [
 	}
 
 	.link-underline-black {
-		background-image: linear-gradient(transparent, transparent), linear-gradient(#991b1b, #991b1b);
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#F2EDE3, #F2EDE3);
 	}
 
 	.link-underline:hover {

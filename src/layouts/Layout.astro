@@ -42,10 +42,18 @@ const { title, description, image } = Astro.props;
 			}}
 		/>
 	</head>
-	<body>
-		<div class={"bg-body font-poppins"}><slot /></div>
+	<body class={"bg-beige"}>
+		<div><slot /></div>
 		<footer class={"p-10"}>
 			<p class={"text-center"}>&copy; Exerra</p>
 		</footer>
 	</body>
 </html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+	html {
+		font-family: "Inria Sans", sans-serif;
+	}
+</style>
