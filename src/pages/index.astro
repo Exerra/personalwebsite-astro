@@ -1,19 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
 import Section from '../components/Section.astro';
-import Twemoji from '../components/Twemoji.astro';
 import getNPMPackages from '../util/npm';
 import ProjectCard from '../components/ProjectCard.astro';
 import AboutCard from '../components/AboutCard.astro';
-import ProjectsTitle from '../components/small/ProjectsTitle.astro';
 
 
 const npm = await getNPMPackages()
 
-let currentDate = new Date() // I cannot be arsed to update the website every year so I made this to basically auto calc the time between when I started web and full-stack dev
+let currentDate = new Date() // calculates web dev and fullstack dev time
 let currentYear = currentDate.getFullYear()
 
 let dates = {
