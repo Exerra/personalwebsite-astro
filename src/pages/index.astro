@@ -199,48 +199,6 @@ let knowledge = [
 			))}
 		</div>
 	</Section>
-
-	<!--
-	<Section name={"Projects"}>
-		<div class={"flex flex-wrap gap-6"}>
-			{work.map(({ date, name, description, url }) => (
-				<ProjectCard 
-					date={date} 
-					name={name} 
-					description={description} 
-					href={url} 
-					label={"Visit the project"} 
-				/>
-			))}
-		</div>
-	</Section>
-
-
-	<Section name={"Packages"}>
-		<div class={"flex flex-wrap gap-6"}>
-			{npm.packages.objects.map((pkg) => (
-				<ProjectCard 
-					date={new Date(pkg.created.ts).getFullYear()} 
-					name={pkg.name} 
-					description={pkg.description} 
-					href={`https://npmjs.com/package/${pkg.name}`} 
-					label={"View on NPM"} 
-				/>
-			))}
-		</div>
-	</Section>
-
-	<Section name={"My knowledge"}>
-		<div class={"flex gap-6 flex-wrap"}>
-			{knowledge.map(knowledge => (
-				<div class={"w-full basis-1/3 grow lg:basis-1/5 shadow-2xl bg-white rounded-lg p-10"}>
-					<h2 class="font-sm font-bold text-highlight">{knowledge.type}</h2>
-					<h3 class={"text-3xl font-bold"}>{knowledge.name}</h3>
-				</div>
-			))}
-		</div>
-	</Section>
-	-->
 </Layout>
 <style is:global>
 	.link-underline {
