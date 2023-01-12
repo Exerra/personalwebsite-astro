@@ -24,6 +24,19 @@ const { title, description, image } = Astro.props;
 			twitter={{
 				creator: "@Exerra"
 			}}
+			openGraph={{
+				basic: {
+					title: title,
+					image: "https://cdn.exerra.xyz/png/pfp.png",
+					type: "profile",
+				},
+				optional: {
+					description: description,
+				},
+				image: {
+					alt: "Exerra's profile picture"
+				}
+			}}
 			extend={{
 				link: [{ rel: "icon", href: "https://cdn.exerra.xyz/png/pfp.png" }]
 			}}
