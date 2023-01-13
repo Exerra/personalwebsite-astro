@@ -1,0 +1,86 @@
+<div id="invertedcursor"></div>
+
+<script>
+    const cursor = document.getElementById("invertedcursor")!
+
+    let scale = 1
+
+    const animateCursor = (e: MouseEvent) => {
+        const x = e.clientX - cursor.offsetWidth / 2
+        const y = e.clientY - cursor.offsetHeight / 2
+
+        const keyframes = {
+            transform: `translate(${x}px, ${y}px)`
+        }
+
+        update(x, y, scale)
+    }
+
+    const hoverCursor = () => {
+        scale = 3
+    }
+
+    const unhoverCursor = () => {
+        scale = 1
+    }
+
+    const update = (x: number, y: number, scale: number) => {
+        const keyframes = {
+            transform: `translate(${x}px, ${y}px) scale(${scale})`
+        }
+
+        cursor.animate(keyframes, {
+            duration: 800,
+            fill: "forwards"
+        })
+    }
+
+    window.onmousemove = e => {
+        animateCursor(e)
+
+        const hoverables = document.querySelectorAll(".hoverable")
+
+        const blackAreas = document.querySelectorAll(".blackArea")
+
+        /*for (let i = 0; i < hoverables.length; i++) {
+            let h = hoverables[i]
+
+            h.addEventListener("mouseenter", hoverCursor)
+            h.addEventListener("mouseleave", unhover)
+        }*/
+
+        hoverables.forEach(h => {
+            h.addEventListener("mouseenter", () => scale = 2)
+            h.addEventListener("mouseleave", () => scale = 1)
+        })
+    }
+</script>
+
+<style>
+    body {
+        height: 100%;
+        min-height: 100%;
+    }
+    
+    #invertedcursor {
+        height: 40px;
+        width: 40px;
+        background-color: #F2EDE3;
+        border-radius: 20px;
+
+        mix-blend-mode: difference;
+
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 100000;
+
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 500ms ease;
+    }
+
+    body:hover #invertedcursor {
+        opacity: 1;
+    }
+</style>

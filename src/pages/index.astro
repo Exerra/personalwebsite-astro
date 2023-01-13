@@ -116,29 +116,40 @@ let knowledge = [
 	</div>
 
 	<Section name="About me">
-		<div class={"flex flex-wrap gap-6 transition ease-in-out"}>
-			<AboutCard title="Bio">
-				I am a full-stack developer from
-				<a
-					href="https://www.latvia.travel/en"
-					target={"_blank"}
-					class={"inline-flex transition duration-150 ease-in-out font-bold link link-underline link-underline-black"}
-				>Latvia
-				</a>&nbsp;with {dates.startedWebDev} years of experience as a web developer and {dates.startedFullStackDev} years as a full-stack developer.
-				I have also won <b>first place</b> in a <b>country-wide hackathon</b>.
-			</AboutCard>
-
-			<AboutCard title="Education">
-				I am entirely self-taught from various resources, friends and massive amounts of StackOverflow
-			</AboutCard>
-
-			<AboutCard title="Hobbies">
-				I have a professional education in music, so I also like to play the saxophone & piano sometimes. So far I haven't released any music, but who knows, that might change soon. Apart from music, I also enjoy playing video games (mostly stealth games and RPGs (Bethesda ones especially)).
-			</AboutCard>
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+			<div class={"flex flex-wrap gap-6 transition ease-in-out"}>
+				<AboutCard title="Bio">
+					I am a full-stack developer from
+					<a
+						href="https://www.latvia.travel/en"
+						target={"_blank"}
+						class={"font-bold hoverable"}
+					>Latvia
+					</a>with {dates.startedWebDev} years of experience as a web developer and {dates.startedFullStackDev} years as a full-stack developer.
+					I have also won <b>first place</b> in a <b>country-wide hackathon</b>.
+				</AboutCard>
+	
+				<AboutCard title="Education">
+					I am entirely self-taught from various resources, friends and massive amounts of StackOverflow
+				</AboutCard>
+	
+				<AboutCard title="Hobbies">
+					I have a professional education in music, so I also like to play the saxophone & piano sometimes. So far I haven't released any music, but who knows, that might change soon. Apart from music, I also enjoy playing video games (mostly stealth games and RPGs (Bethesda ones especially)).
+				</AboutCard>
+			</div>
+			<div class="flex flex-col gap-6 lg:mx-12 align-middle mt-12 lg:my-auto">
+				<blockquote class="text-4xl italic font-semibold text-grey-card">
+					<svg aria-hidden="true" class="w-10 h-10 text-grey-card/80" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
+					<p>What a fool you are, I'm a god! How can you kill a god? What a grand and intoxicating innocence! How could you be so naive? There is no escape, no recall or intervention can work in this place! Come! Lay down your weapons! It is not too late for my mercy...</p>
+				</blockquote>
+				<figcaption class="text-left text-4xl font-bold text-grey-card/110">
+					<p>- Dagoth Ur<span class="text-grey-card">, Morrowind (2002)</span></p>
+				</figcaption>
+			</div>
 		</div>
 	</Section>
 
-	<section class="bg-black mt-52 pb-12 md:pb-24 lg:pb-36 rounded-tl-[90px] rounded-br-[90px] text-beige text-left">
+	<section class="bg-black mt-52 pb-12 md:pb-24 lg:pb-36 rounded-tl-[90px] rounded-br-[90px] text-beige text-left blackArea">
 		<div class="grid md:grid-cols-1 lg:grid-cols-2">
 			<div class={`mt-12 mx-8 mb-12 md:mt-24 md:mx-24 lg:mb-0 lg:mt-52 lg:ml-52 lg:mr-0`}>
 				<h2 class="font-bold text-4xl md:text-6xl lg:text-8xl">My projects</h2>

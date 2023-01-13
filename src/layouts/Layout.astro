@@ -1,6 +1,7 @@
 ---
 
 import { SEO } from "astro-seo"
+import Cursor from "../components/Cursor.astro";
 
 export interface Props {
 	title: string;
@@ -43,6 +44,7 @@ const { title, description, image } = Astro.props;
 		/>
 	</head>
 	<body class={"bg-beige"}>
+		<Cursor />
 		<div><slot /></div>
 		<footer class={"p-10"}>
 			<p class={"text-center"}>&copy; Exerra</p>

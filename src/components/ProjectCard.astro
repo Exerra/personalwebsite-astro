@@ -8,5 +8,5 @@ const { date, name, description, href, label } = Astro.props
         <hr class="border-2 border-grey-card rounded-xl my-3" />
         <p class="text-xl mb-4">{description}</p>
     </div>
-    <a href={href} target={"_blank"} class={"transition ease-in-out text-grey-card/80 text-xl font-bold hover:text-grey-card after:content-['_↗']"}>{label}</a>
+    <a href={href} target={"_blank"} class={"hoverable transition ease-in-out text-grey-card/80 text-xl font-bold hover:text-grey-card after:content-['_↗']"}>{label}</a>
 </div>
