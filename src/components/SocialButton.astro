@@ -3,7 +3,7 @@ const { href, label, icon } = Astro.props
 ---
 
 <button aria-label={label}>
-    <a href={href} aria-label={label} target={"_blank"} class={"transition ease-in-out fill-black/60 hover:fill-black hoverable"}>
+    <a href={href} aria-label={label} target={"_blank"} class={"transition ease-in-out fill-black/60 hover:fill-black"}>
         <slot />
     </a>
 </button>

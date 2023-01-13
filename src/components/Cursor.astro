@@ -38,6 +38,7 @@
     window.onmousemove = e => {
         animateCursor(e)
 
+        const links = document.querySelectorAll("a")
         const hoverables = document.querySelectorAll(".hoverable")
 
         const blackAreas = document.querySelectorAll(".blackArea")
@@ -49,7 +50,9 @@
             h.addEventListener("mouseleave", unhover)
         }*/
 
-        hoverables.forEach(h => {
+        const all = [...links, ...hoverables]
+
+        all.forEach(h => {
             h.addEventListener("mouseenter", () => scale = 2)
             h.addEventListener("mouseleave", () => scale = 1)
         })
