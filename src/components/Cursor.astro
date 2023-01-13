@@ -3,7 +3,7 @@
 <script>
     const cursor = document.getElementById("invertedcursor")!
 
-    let scale = 1
+    let scale = 1.2
 
     const animateCursor = (e: MouseEvent) => {
         const x = e.clientX - cursor.offsetWidth / 2
@@ -38,23 +38,16 @@
     window.onmousemove = e => {
         animateCursor(e)
 
-        const links = document.querySelectorAll("a")
-        const hoverables = document.querySelectorAll(".hoverable")
+        const hoverableElements = [
+            "a",
+            ".hoverable"
+        ]
 
-        const blackAreas = document.querySelectorAll(".blackArea")
-
-        /*for (let i = 0; i < hoverables.length; i++) {
-            let h = hoverables[i]
-
-            h.addEventListener("mouseenter", hoverCursor)
-            h.addEventListener("mouseleave", unhover)
-        }*/
-
-        const all = [...links, ...hoverables]
-
-        all.forEach(h => {
-            h.addEventListener("mouseenter", () => scale = 2)
-            h.addEventListener("mouseleave", () => scale = 1)
+        hoverableElements.forEach(element => {
+            document.querySelectorAll(element).forEach(h => {
+                h.addEventListener("mouseenter", () => scale = 2)
+                h.addEventListener("mouseleave", () => scale = 1)
+            })
         })
     }
 </script>
