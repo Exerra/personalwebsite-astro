@@ -7,6 +7,10 @@ import getNPMPackages from '../util/npm';
 import ProjectCard from '../components/ProjectCard.astro';
 import AboutCard from '../components/AboutCard.astro';
 import Quote from '../components/Quote.astro';
+import SocialButton from '../components/SocialButton.astro';
+import TwitterIcon from '../components/icons/TwitterIcon.astro';
+import GithubIcon from '../components/icons/GithubIcon.astro';
+import DiscordIcon from '../components/icons/DiscordIcon.astro';
 
 
 const npm = await getNPMPackages()
@@ -104,14 +108,33 @@ let knowledge = [
 ---
 
 <Layout title="Exerra" description={`A full-stack developer from Latvia with ${dates.startedWebDev} of experience as a developer.`}>
+	<!-- Maybe someday -->
+	<!--
+	<div id="mobileSocialBar" class="hidden z-[999] align-middle bottom-0 mb-5 bg-beige rounded-full p-5 gap-6  py-3 shadow-2xl">
+		<SocialButton href={"https://twitter.com/Exerra"} label={"Link to twitter"}>
+			<TwitterIcon size={48} />
+		</SocialButton>
+
+		<SocialButton href={"https://github.com/Exerra"} label={"Link to github"}>
+			<GithubIcon size={48} />
+		</SocialButton>
+
+		<SocialButton href={"https://guild.exerra.xyz"} label={"Link to my discord server"}>
+			<DiscordIcon size={48} />
+		</SocialButton>
+	</div>
+	-->
+
+
 	<div class={"h-screen"}>
 		<Navbar />
-		<header class="grid lg:grid-cols-2 mt-16 pt-52 lg:pt-16">
+		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32">
 			<div>
 				<Header />
 			</div>
-			<div class="my-auto ml-auto hidden lg:block">
-				<img src="/1.png" height={600} width={600} />
+			<div class="md:hidden lg:my-auto lg:ml-auto relative lg:block mt-16 flex flex-row">
+				<img src="/5.png" height={600} width={600} class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" />
+				<p class="text-right font-bold -rotate-90 absolute right-0 bottom-52 -m-7 lg:hidden">← scroll down</p>
 			</div>
 		</header>
 	</div>
@@ -187,7 +210,7 @@ let knowledge = [
 							name={name} 
 							description={description} 
 							href={`https://npmjs.com/package/${name}`} 
-							label={"Visit the project"} 
+							label={"View on NPM"} 
 						/>
 					))}
 				</div>
@@ -224,5 +247,12 @@ let knowledge = [
 	.link-underline:hover {
 		background-size: 130% 3px;
 		background-position: 0% 100%;
+	}
+</style>
+
+<style>
+	#mobileSocialBar {
+		left: 50%;
+		transform: translateX(-50%);
 	}
 </style>
