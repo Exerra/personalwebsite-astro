@@ -11,6 +11,30 @@ import { Image } from '@astrojs/image/components';
 import work from '../data/work';
 import knowledge from '../data/knowledge';
 
+const { PUBLIC_STEAM_KEY, PUBLIC_STEAM_USER, PROD } = import.meta.env
+
+const gamesFetch = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${PUBLIC_STEAM_KEY}&steamid=${PUBLIC_STEAM_USER}&include_played_free_games=true`)
+
+const games = await gamesFetch.json()
+
+let totalPlaytime = 0
+let achievements = PROD ? 0 : 123
+
+await games.response.games.forEach(async (game: { playtime_forever: number; appid: any; }) => {
+	totalPlaytime = totalPlaytime + game.playtime_forever
+
+	if (game.playtime_forever === 0) return
+
+	if (!PROD) return
+
+	const ftch = await fetch(`http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?key=${PUBLIC_STEAM_KEY}&steamid=${PUBLIC_STEAM_USER}&appid=${game.appid}`)
+
+	const data = await ftch.json()
+
+	achievements = achievements + data.playerstats.achievements.length()
+})
+
+console.log(totalPlaytime)
 
 const npm = await getNPMPackages()
 
@@ -57,7 +81,7 @@ let dates = {
 				</AboutCard>
 	
 				<AboutCard title="Hobbies">
-					I have a professional education in music, so I also like to sometimes play the saxophone & piano. So far I haven't released any music, but who knows, that might change soon. Apart from music, I also enjoy playing video games, mostly RPGs (Bethesda ones especially) and stealth games.
+					I have a professional education in music, so I also like to sometimes play the saxophone & piano. So far I haven't released any music, but who knows, that might change soon. Apart from music, I also enjoy playing video games, mostly RPGs (Bethesda ones especially) and stealth games. So far I have played {(totalPlaytime / 60/ 1000).toFixed(0)}k hours on Steam and have {achievements} achievements on Steam.
 				</AboutCard>
 			</div>
 
