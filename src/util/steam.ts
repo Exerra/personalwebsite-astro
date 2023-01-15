@@ -36,7 +36,7 @@ const getOwnedGames = async () => {
 }
 
 const getGameAchievements = async (appid: number) => {
-    const ftch = await fetch(`http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?key=${PUBLIC_STEAM_KEY}&steamid=${PUBLIC_STEAM_USER}&appid=${game.appid}`)
+    const ftch = await fetch(`http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?key=${PUBLIC_STEAM_KEY}&steamid=${PUBLIC_STEAM_USER}&appid=${appid}`)
 
 	const data = await ftch.json()
 
