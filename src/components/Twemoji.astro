@@ -1,16 +1,15 @@
 ---
+import ExtractUnicode from "extract-unicode"
+
+export interface Props {
+    emoji: string;
+}
+
 const { emoji } = Astro.props
 
-let arr = [...emoji]
+let codepoints = ExtractUnicode(emoji)
 
-let image = "https://cdn.exerra.xyz/svg/twemoji/"
-
-arr.forEach(u => {
-    image += `${u.codePointAt(0)?.toString(16)}-`
-})
-
-image = image.slice(0, -1)
-image += ".svg"
+let image = `https://cdn.exerra.xyz/svg/twemoji/${codepoints.join("-")}.svg`
 ---
 
 <img draggable={false} src={image} alt={emoji} style={{ width: "1.2em" }} />

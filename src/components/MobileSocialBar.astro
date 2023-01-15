@@ -1,0 +1,28 @@
+---
+import DiscordIcon from "./icons/DiscordIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import TwitterIcon from "./icons/TwitterIcon.astro";
+import SocialButton from "./SocialButton.astro";
+
+---
+
+<div id="mobileSocialBar" class="hidden z-[999] align-middle bottom-0 mb-5 bg-beige rounded-full p-5 gap-6  py-3 shadow-2xl">
+    <SocialButton href={"https://twitter.com/Exerra"} label={"Link to twitter"}>
+        <TwitterIcon size={48} />
+    </SocialButton>
+
+    <SocialButton href={"https://github.com/Exerra"} label={"Link to github"}>
+        <GithubIcon size={48} />
+    </SocialButton>
+
+    <SocialButton href={"https://guild.exerra.xyz"} label={"Link to my discord server"}>
+        <DiscordIcon size={48} />
+    </SocialButton>
+</div>
+
+<style>
+	#mobileSocialBar {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+</style>

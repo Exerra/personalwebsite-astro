@@ -8,6 +8,8 @@ import ProjectCard from '../components/ProjectCard.astro';
 import AboutCard from '../components/AboutCard.astro';
 import Quote from '../components/Quote.astro';
 import { Image } from '@astrojs/image/components';
+import work from '../data/work';
+import knowledge from '../data/knowledge';
 
 
 const npm = await getNPMPackages()
@@ -20,109 +22,9 @@ let dates = {
 	startedFullStackDev: currentYear - 2020
 }
 
-let work = [
-	{
-		date: "2022",
-		name: "Utilities",
-		description: "Various utilities that might come in handy",
-		url: "https://utilities.exerra.xyz"
-	},
-	{
-		date: "2022",
-		name: "Shortener",
-		description: "Quick and secure URL service integrating Exerra Phishing Check for unparalleled user protection",
-		url: "https://s.exerra.xyz"
-	},
-	{
-		date: "2022",
-		name: "Benchmarks",
-		description: "GPU benchmarks for games ranging from indie platformers to AAA shooters.",
-		url: "https://benchmarks.exerra.xyz"
-	},
-	{
-		date: "2022",
-		name: "Mod viewer",
-		description: "Every game mod Exerra has published resides here",
-		url: "https://mods.exerra.xyz"
-	},
-	{
-		date: "2022",
-		name: "Phishing API",
-		description: "API for checking if links are known phishing attempts",
-		url: "https://rapidapi.com/Exerra/api/exerra-phishing-check"
-	},
-	{
-		date: "Since 2019",
-		name: "Karen Bot",
-		description: "Multi-purpose Discord bot featuring commands for server moderation, sub-reddits, Karen Bot profiles, Spotify songs/albums/artists and more",
-		url: "https://karen.exerra.xyz"
-	}
-]
-
-let knowledge = [
-	{
-		type: "Language",
-		name: "HTML",
-		used: "write the elements in a website"
-	},
-	{
-		type: "Language",
-		name: "CSS",
-		used: "write the style a website"
-	},
-	{
-		type: "Language",
-		name: "Javascript",
-		used: "write the interactive parts of a website"
-	},
-	{
-		type: "Superset",
-		name: "Typescript",
-		used: "create applications with more safety than Javascript"
-	},
-	{
-		type: "Framework",
-		name: "NodeJS",
-		used: "write the server code with Javascript"
-	},
-	{
-		type: "Language",
-		name: "Swift",
-		used: "write native apps for the various OS's by Apple"
-	},
-	{
-		type: "Framework",
-		name: "React",
-		used: "create highly-interactive web apps"
-	},
-	{
-		type: "Framework",
-		name: "Express",
-		used: "create APIs"
-	},
-]
-
 ---
 
 <Layout title="Exerra" description={`A full-stack developer from Latvia with ${dates.startedWebDev} of experience as a developer.`}>
-	<!-- Maybe someday -->
-	<!--
-	<div id="mobileSocialBar" class="hidden z-[999] align-middle bottom-0 mb-5 bg-beige rounded-full p-5 gap-6  py-3 shadow-2xl">
-		<SocialButton href={"https://twitter.com/Exerra"} label={"Link to twitter"}>
-			<TwitterIcon size={48} />
-		</SocialButton>
-
-		<SocialButton href={"https://github.com/Exerra"} label={"Link to github"}>
-			<GithubIcon size={48} />
-		</SocialButton>
-
-		<SocialButton href={"https://guild.exerra.xyz"} label={"Link to my discord server"}>
-			<DiscordIcon size={48} />
-		</SocialButton>
-	</div>
-	-->
-
-
 	<div class={"h-screen"}>
 		<Navbar />
 		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32 xl:pt-0 3xl:pt-32">
@@ -231,29 +133,3 @@ let knowledge = [
 		</div>
 	</Section>
 </Layout>
-<style is:global>
-	.link-underline {
-		border-bottom-width: 0;
-		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-		background-size: 0 3px;
-		background-position: 0% 100%;
-		background-repeat: no-repeat;
-		transition: background-size 150ms ease-in-out;
-	}
-
-	.link-underline-black {
-		background-image: linear-gradient(transparent, transparent), linear-gradient(#F2EDE3, #F2EDE3);
-	}
-
-	.link-underline:hover {
-		background-size: 130% 3px;
-		background-position: 0% 100%;
-	}
-</style>
-
-<style>
-	#mobileSocialBar {
-		left: 50%;
-		transform: translateX(-50%);
-	}
-</style>

@@ -1429,6 +1429,11 @@ extend@^3.0.0:
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
+extract-unicode@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/extract-unicode/-/extract-unicode-1.0.1.tgz#5ec382614297c434c4ac0bb8b108bdcdbe0ccafb"
+  integrity sha512-x0uLyK9R41bP/Lq9BKluVFF14s5Yk+K6ackQ7Dv30YCeI4gbnvXWhZ3lMhnaNqp5ICMXKuWK6mX0+wR0cnAFEA==
+
 fast-glob@^3.2.11, fast-glob@^3.2.12:
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
