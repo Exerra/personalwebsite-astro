@@ -1,6 +1,6 @@
-# [Exerra's website](https://exerra.xyz)
+# [My personal website](https://exerra.xyz)
 
-This is the 3rd redesign of Exerra's website, featuring a beige, grey, black and red colour scheme. The images have been sourced from TRUFCreative.
+This is the 3rd redesign of my website, featuring a beige, grey, black and red colour scheme. The images have been sourced from TRUFCreative.
 
 ## Project stack
 The website framework is [Astro](https://astro.build), which is a static site builder that generates ridiculously small JS.
