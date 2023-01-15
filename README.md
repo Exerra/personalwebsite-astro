@@ -16,6 +16,6 @@ Website can be deployed on any hosting provider that has support for a build ste
 - [ ] Improve compability with different screen sizes
 - [ ] Add a few easter eggs (Konami code?)
 - [ ] Add a few build-step integrations for stats
-- [ ] Add artwork for quote
+- [x] Add artwork for quote
 - [ ] Add another Morrowind quote
 - [ ] Add fontawesome icons
