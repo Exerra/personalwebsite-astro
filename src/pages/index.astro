@@ -32,6 +32,8 @@ await games.response.games.forEach(async (game: { playtime_forever: number; appi
 	const data = await ftch.json()
 
 	if (!data.playerstats.success) return
+
+	if (!("achievements" in data.playerstats)) return
 	
 	achievements = achievements + data.playerstats.achievements.length
 })
