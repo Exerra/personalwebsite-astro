@@ -11,7 +11,7 @@ Website can be deployed on any hosting provider that has support for a build ste
 
 ## TODO
 
-- [ ] Migrate images to CDN
+- [ ] Migrate images to CDN (Astro image optimiser should be able to optimise them)
 - [ ] Migrate blog to this website (?)
 - [ ] Improve compability with different screen sizes
 - [ ] Add a few easter eggs (Konami code?)
