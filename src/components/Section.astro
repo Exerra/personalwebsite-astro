@@ -4,7 +4,7 @@ import Title from "./Title.astro";
     const { name, subtitle } = Astro.props
 ---
 
-<div class={"container mt-32 justify-between mx-auto w-full px-8 md:px-0"}>
+<div class={"container mt-32 justify-between mx-auto w-full px-8 2xl:px-36 3xl:px-0"}>
     <Title hasSubheading={subtitle != undefined ? true : false}>{name}</Title>
     {subtitle != undefined ? <h2 class="text-3xl text-gray-600">{subtitle}</h2> : <></>}
     <slot />

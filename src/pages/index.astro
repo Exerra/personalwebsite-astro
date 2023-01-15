@@ -11,6 +11,7 @@ import SocialButton from '../components/SocialButton.astro';
 import TwitterIcon from '../components/icons/TwitterIcon.astro';
 import GithubIcon from '../components/icons/GithubIcon.astro';
 import DiscordIcon from '../components/icons/DiscordIcon.astro';
+import { Image } from '@astrojs/image/components';
 
 
 const npm = await getNPMPackages()
@@ -128,12 +129,12 @@ let knowledge = [
 
 	<div class={"h-screen"}>
 		<Navbar />
-		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32">
+		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32 xl:pt-0 3xl:pt-32">
 			<div>
 				<Header />
 			</div>
 			<div class="md:hidden lg:my-auto lg:ml-auto relative lg:block mt-16 flex flex-row">
-				<img src="/5.png" height={600} width={600} class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" />
+				<Image src={"/5.png"} height={600} width={600} alt="Decorative image" class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" />
 				<p class="text-right font-bold -rotate-90 absolute right-0 bottom-52 -m-7 lg:hidden">← scroll down</p>
 			</div>
 		</header>
@@ -181,7 +182,7 @@ let knowledge = [
 				</p>
 			</div>
 			<div class="hidden lg:block ml-auto">
-				<img src="/2.png" height={700} width={700} class="h-[400px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px]" />
+				<Image src={"/6.png"} height={700} width={700} alt="Decorative image of a sailboat" class="h-[400px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] rounded-bl-[115px]" />
 			</div>
 		</div>
 

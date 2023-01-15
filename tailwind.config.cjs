@@ -8,6 +8,9 @@ module.exports = {
                 highlight: "rgb(192 132 252)",
 				beige: "#F2EDE3",
 				"grey-card": "#494949"
+			},
+			screens: {
+				'3xl': '1600px'
 			}
 		},
 	},
