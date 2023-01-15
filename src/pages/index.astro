@@ -31,7 +31,9 @@ await games.response.games.forEach(async (game: { playtime_forever: number; appi
 
 	const data = await ftch.json()
 
-	achievements = achievements + data.playerstats.achievements.length()
+	if (!data.playerstats.success) return
+	
+	achievements = achievements + data.playerstats.achievements.length
 })
 
 console.log(totalPlaytime)
