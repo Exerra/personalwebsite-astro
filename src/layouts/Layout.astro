@@ -48,8 +48,9 @@ const { title, description, image } = Astro.props;
 	<body class={"bg-beige"}>
 		<Cursor />
 		<main><slot /></main>
-		<footer class={"p-10"}>
-			<p class={"text-center"}>&copy; Exerra</p>
+		<footer class={"p-10 text-center"}>
+			<p class="font-bold">&copy; Exerra</p>
+			<p>Dagoth Ur illustration by <a class="cursor-pointer font-bold" href="https://reddit.com/u/WolfDrag666on">/u/WolfDrag666on</a></p>
 		</footer>
 	</body>
 </html>
