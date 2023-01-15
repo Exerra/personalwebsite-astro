@@ -1,6 +1,7 @@
 ---
 
 import { SEO } from "astro-seo"
+import Cursor from "../components/Cursor.astro";
 
 export interface Props {
 	title: string;
@@ -41,11 +42,23 @@ const { title, description, image } = Astro.props;
 				link: [{ rel: "icon", href: "https://cdn.exerra.xyz/png/pfp.png" }]
 			}}
 		/>
+		
+		<script src="https://kit.fontawesome.com/8899b4994a.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
-		<div class={"bg-body font-poppins"}><slot /></div>
-		<footer class={"p-10"}>
-			<p class={"text-center"}>&copy; Exerra</p>
+	<body class={"bg-beige"}>
+		<Cursor />
+		<main><slot /></main>
+		<footer class={"p-10 text-center"}>
+			<p class="font-bold">&copy; Exerra</p>
+			<p>Dagoth Ur illustration by <a class="cursor-pointer font-bold" href="https://reddit.com/u/WolfDrag666on">/u/WolfDrag666on</a></p>
 		</footer>
 	</body>
 </html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+	html {
+		font-family: "Inria Sans", sans-serif;
+	}
+</style>
