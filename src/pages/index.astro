@@ -10,10 +10,34 @@ import Quote from '../components/Quote.astro';
 import { Image } from '@astrojs/image/components';
 import work from '../data/work';
 import knowledge from '../data/knowledge';
-import { calculateAchievementCount, calculatePlaytime } from '../util/steam';
+import { calculatePlaytime, getGameAchievements, getOwnedGames } from '../util/steam';
 
 const totalPlaytime = import.meta.env.PROD ? await calculatePlaytime() : 80000
-const achievements = import.meta.env.PROD ? await calculateAchievementCount() : 123
+const games = import.meta.env.PROD ? await getOwnedGames() : {
+	response: {
+		game_count: 0,
+		games: [{
+			appid: 440,
+			playtime_forever: 0,
+			playtime_windows_forever: 0,
+			playtime_mac_forever: 0,
+			playtime_linux_forever: 0,
+			rtime_last_played: 0
+		}]
+	}
+}
+
+let achievements = 0
+
+await games.response.games.forEach(async game => {
+	const { playerstats } = await getGameAchievements(game.appid)
+
+	if (!playerstats.success) return
+
+	if (!("achievements" in playerstats)) return
+	
+	achievements = achievements + playerstats.achievements.length
+})
 
 const npm = await getNPMPackages()
 

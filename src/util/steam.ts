@@ -55,22 +55,4 @@ const calculatePlaytime = async () => {
     return playtime
 }
 
-const calculateAchievementCount = async () => {
-    const games = await getOwnedGames()
-
-    let achievements = 0
-
-    games.response.games.forEach(async game => {
-        const { playerstats } = await getGameAchievements(game.appid)
-
-        if (!playerstats.success) return
-
-        if (!("achievements" in playerstats)) return
-        
-        achievements = achievements + playerstats.achievements.length
-    })
-
-    return achievements
-}
-
-export { getOwnedGames, getGameAchievements, calculateAchievementCount, calculatePlaytime }
+export { getOwnedGames, getGameAchievements, calculatePlaytime }
