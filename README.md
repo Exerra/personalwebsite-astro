@@ -18,4 +18,4 @@ Website can be deployed on any hosting provider that has support for a build ste
 - [ ] Add a few build-step integrations for stats
 - [x] Add artwork for quote
 - [ ] Add another Morrowind quote
-- [ ] Add fontawesome icons
+- [x] Add fontawesome icons

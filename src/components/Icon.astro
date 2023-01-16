@@ -1,0 +1,14 @@
+---
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+
+export interface Props {
+    icon: IconDefinition,
+    class?: string
+}
+
+const icn = icon(Astro.props.icon)
+
+---
+
+<i class={Astro.props.class ?? ""} set:html={icn.html[0]} />

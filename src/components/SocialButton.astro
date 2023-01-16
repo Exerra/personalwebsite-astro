@@ -2,8 +2,6 @@
 const { href, label, icon } = Astro.props
 ---
 
-<button aria-label={label}>
-    <a href={href} aria-label={label} target={"_blank"} class={"transition ease-in-out fill-black/60 hover:fill-black"}>
-        <slot />
-    </a>
-</button>
+<a href={href} aria-label={label} target={"_blank"} class={"transition ease-in-out fill-black/60 hover:fill-black text-black/60 hover:text-black"}>
+    <slot />
+</a>
