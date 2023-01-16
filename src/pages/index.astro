@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar.astro';
 import Section from '../components/Section.astro';
 import getNPMPackages from '../util/npm';
 import ProjectCard from '../components/ProjectCard.astro';
-import AboutCard from '../components/AboutCard.astro';
+import DarkCard from '../components/DarkCard.astro';
 import Quote from '../components/Quote.astro';
 import { Image, Picture } from '@astrojs/image/components';
 import work from '../data/work';
@@ -38,7 +38,7 @@ let dates = {
 	<Section name="About me">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 			<div class={"flex flex-wrap gap-6 transition ease-in-out"}>
-				<AboutCard title="Bio">
+				<DarkCard title="Bio">
 					I am a full-stack developer from
 					<a
 						href="https://www.latvia.travel/en"
@@ -47,17 +47,17 @@ let dates = {
 					>Latvia
 					</a>with {dates.startedWebDev} years of experience as a web developer and {dates.startedFullStackDev} years as a full-stack developer.
 					I have also won <b>first place</b> in a <b>country-wide hackathon</b>.
-				</AboutCard>
+				</DarkCard>
 	
-				<AboutCard title="Education">
+				<DarkCard title="Education">
 					I am entirely self-taught from various resources, friends and massive amounts of StackOverflow
-				</AboutCard>
+				</DarkCard>
 	
-				<AboutCard title="Hobbies">
+				<DarkCard title="Hobbies">
 					I have a professional education in music, and I enjoy playing the saxophone and piano in my free time.
 					I haven't released any music yet, but that might change soon.
 					In addition to music, I also enjoy playing video games, particularly RPGs (especially those by Bethesda) and stealth games.
-				</AboutCard>
+				</DarkCard>
 			</div>
 
 			<Quote author="Dagoth Ur" source={"TES III: Morrowind"}>
