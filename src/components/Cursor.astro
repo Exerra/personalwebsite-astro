@@ -16,14 +16,6 @@
         update(x, y, scale)
     }
 
-    const hoverCursor = () => {
-        scale = 3
-    }
-
-    const unhoverCursor = () => {
-        scale = 1
-    }
-
     const update = (x: number, y: number, scale: number) => {
         const keyframes = {
             transform: `translate(${x}px, ${y}px) scale(${scale})`
@@ -40,7 +32,8 @@
 
         const hoverableElements = [
             "a",
-            ".hoverable"
+            ".hoverable",
+            "button"
         ]
 
         hoverableElements.forEach(element => {
