@@ -2,7 +2,7 @@ const work = [
 	{
 		date: "2022",
 		name: "Utilities",
-		description: "Various utilities that might come in handy",
+		description: "Various utilities that might come in handy, such as the Aspect Ratio Calculator, download time calculator and death/birth coefficient calculator",
 		url: "https://utilities.exerra.xyz"
 	},
 	{
@@ -20,7 +20,7 @@ const work = [
 	{
 		date: "2022",
 		name: "Mod viewer",
-		description: "Every game mod Exerra has published resides here",
+		description: "Every game mod I've published resides here",
 		url: "https://mods.exerra.xyz"
 	},
 	{
@@ -32,7 +32,7 @@ const work = [
 	{
 		date: "Since 2019",
 		name: "Karen Bot",
-		description: "Multi-purpose Discord bot featuring commands for server moderation, sub-reddits, Karen Bot profiles, Spotify songs/albums/artists and more",
+		description: "Multi-purpose Discord bot featuring commands for server moderation, sub-reddits, Karen Bot profiles, Spotify songs/albums/artists and more. (EOL)",
 		url: "https://karen.exerra.xyz"
 	}
 ]
