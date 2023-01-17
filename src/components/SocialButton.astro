@@ -1,7 +1,14 @@
 ---
-const { href, label, icon } = Astro.props
+export interface Props {
+    href: string,
+    label: string,
+    icon?: any,
+    rel?: string
+}
+
+const { href, label, icon, rel } = Astro.props
 ---
 
-<a href={href} aria-label={label} target={"_blank"} class={"transition ease-in-out fill-black/60 hover:fill-black text-black/60 hover:text-black"}>
+<a href={href} rel={rel ?? ""} aria-label={label} target={"_blank"} class={"transition ease-in-out fill-black/60 hover:fill-black text-black/60 hover:text-black"}>
     <slot />
 </a>
