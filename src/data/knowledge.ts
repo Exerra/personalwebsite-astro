@@ -7,7 +7,7 @@ const knowledge = [
 	{
 		type: "Language",
 		name: "CSS",
-		used: "write the style a website"
+		used: "write the style of a website"
 	},
 	{
 		type: "Language",
@@ -17,12 +17,12 @@ const knowledge = [
 	{
 		type: "Superset",
 		name: "Typescript",
-		used: "create applications with more safety than Javascript"
+		used: "create applications with more type safety than Javascript"
 	},
 	{
 		type: "Framework",
 		name: "NodeJS",
-		used: "write the server code with Javascript"
+		used: "write server code with Javascript"
 	},
 	{
 		type: "Language",

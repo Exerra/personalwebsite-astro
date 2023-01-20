@@ -13,12 +13,6 @@ const work = [
 	},
 	{
 		date: "2022",
-		name: "Benchmarks",
-		description: "GPU benchmarks for games ranging from indie platformers to AAA shooters.",
-		url: "https://benchmarks.exerra.xyz"
-	},
-	{
-		date: "2022",
 		name: "Mod viewer",
 		description: "Every game mod I've published resides here",
 		url: "https://mods.exerra.xyz"
