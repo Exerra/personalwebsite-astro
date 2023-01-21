@@ -21,7 +21,7 @@ const work = [
 		date: "2022",
 		name: "Phishing API",
 		description: "API for checking if links are known phishing attempts",
-		url: "https://rapidapi.com/Exerra/api/exerra-phishing-check"
+		url: "https://s.exerra.xyz/exerraphishingcheck"
 	},
 	{
 		date: "Since 2019",
