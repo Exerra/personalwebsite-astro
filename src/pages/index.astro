@@ -29,7 +29,16 @@ let dates = {
 		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32 xl:pt-0 3xl:pt-32">
 			<Header />
 			<div class="md:hidden lg:my-auto lg:ml-auto relative lg:block mt-16 flex flex-row">
-				<Image src={"/sunset.jpeg"} format={"webp"} height={600} width={600} alt="Decorative image of a sunset" class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" />
+				<Image
+					src={"/sunset.jpeg"} 
+					format={"webp"} 
+					height={600} 
+					width={600} 
+					alt="Decorative image of a sunset"
+					class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" 
+					loading={"eager"}
+				/>
+
 				<p class="text-right font-bold -rotate-90 absolute right-0 bottom-52 -m-7 lg:hidden">← scroll down</p>
 			</div>
 		</header>
