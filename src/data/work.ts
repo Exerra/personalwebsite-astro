@@ -14,7 +14,7 @@ const work = [
 	{
 		date: "2022",
 		name: "Mod viewer",
-		description: "Every game mod I've published resides here",
+		description: "Every game mod I've published resides here.\nBuilt using Astro, TailwindCSS & Storyblok",
 		url: "https://mods.exerra.xyz"
 	},
 	{

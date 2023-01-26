@@ -6,7 +6,7 @@ const { date, name, description, href, label } = Astro.props
     <div>
         <h2 class="text-4xl lg:text-5xl font-bold">{name}</h2>
         <hr class="border-2 border-grey-card rounded-xl my-3" />
-        <p class="text-xl mb-4">{description}</p>
+        <p class="text-xl mb-4" set:html={description} />
     </div>
     <a href={href} target={"_blank"} class={"transition ease-in-out text-grey-card/80 text-xl font-bold hover:text-grey-card after:content-['_↗']"}>{label}</a>
 </div>

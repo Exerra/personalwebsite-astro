@@ -95,7 +95,7 @@ let dates = {
 						<ProjectCard 
 							date={date} 
 							name={name} 
-							description={description} 
+							description={description.replaceAll("\n", "<br />")} 
 							href={url} 
 							label={"Visit the project"} 
 						/>
