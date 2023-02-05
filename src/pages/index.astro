@@ -141,3 +141,24 @@ let dates = {
 		</div>
 	</Section>
 </Layout>
+
+<script>
+	const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+	let entered: number[] = [];
+
+	document.addEventListener("keydown", (e) => {
+		entered.push(e.keyCode);
+		// @ts-ignore
+		if (entered.toString().indexOf(konamiCode) >= 0) {
+			entered = [];
+			testFunc();
+		}
+	});
+
+	function testFunc() {
+		console.log("Konami code entered!");
+		window.location.href = "/AHJSdgas78d6sa78dasjhdgsadhjsagdjakshdghj"
+	}
+
+
+</script>
