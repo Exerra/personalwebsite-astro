@@ -1,24 +1,28 @@
+---
+import Navbar from "../Navbar.astro";
+
+---
+
 <template id="konamicode">
+    <Navbar />
 	<div class="container mx-auto px-10 pt-10">
-        <div class="text-xl grid grid-cols-2">
-            <img class="mx-auto" src="/dagothur_by_wolfdragon666on_on_reddit.png" />
+        <div class="text-xl grid xl:grid-cols-2">
+            <img class="mx-auto mb-6 h-64 xl:h-full" src="/dagothur_by_wolfdragon666on_on_reddit.png" />
             <!--<p class="font-bold text-2xl">"What game do you prefer?"</p>-->
             <div class="border-2 border-black my-auto p-10 rounded-lg">
 
                 <div id="intro">
                     <h2 class="text-3xl font-bold">Dagoth Ur easter egg</h2><br />
                     Congratulations! You found an easter egg! This is a little dialogue between a mixture of me & Dagoth Ur.
+                    The voice was generated using ElevenLabs AI using a few audio fragments of Dagoth Ur from The Elder Scrolls III: Morrowind.
                 </div>
 
-                <p id="speechBubble" class=""></p>
+                <p id="speechBubble"></p>
             </div>
         </div>
 
-        <div id="speechOptions" class="mt-10 flex flex-row mx-auto gap-6 text-2xl justify-center">
+        <div id="speechOptions" class="mt-10 flex flex-col xl:flex-row mx-auto gap-6 text-2xl justify-center">
             <button aria-label="start" class="p-5 bg-black text-beige rounded-xl font-bold" onclick="start()">[ Start ]</button>
-            <!--<button aria-label="showcase" class="p-5 bg-black text-beige rounded-xl font-bold">Through a showcase</button>
-            <button aria-label="blog" class="p-5 bg-black text-beige rounded-xl font-bold">From a blog post</button>
-            <button aria-label="something_i_made" class="p-5 bg-black text-beige rounded-xl font-bold">Through one of your projects</button>-->
         </div>
     </div>
 
@@ -29,20 +33,20 @@
 		}
 	
 		const introduction = {
-			reply: "Strange. This outcome I did not forsee. That you would use the konami code. In any case, come, Nerevar. Friend or traitor, come. Come and look upon the heart.\nIt began here, it will end here. Have you any parting words, or would you prefer to skip the speeches and get to our business? You are the challenger here after all, so to you goes the curtousy of the first blow.",
+			reply: "Strange. This outcome I did not forsee. In any case, welcome, Nerevar. Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind.",
 			audio: "introduction.mp3"
 		}
 	
 		const userQuestions = [
 			{
 				question: "What country are you from?",
-				reply: "Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia Latvia ",
+				reply: "I am from Latvia and I am proud of my country, and how well it has grown. For countless centuries the vicious empires of the world have tried, and succeeded in conquering us, but no more. We are free, and will remain to be free, and even if we aren't, we will break free with song and dance, again. The singing revolution is, sadly, not talked about enough. The three Baltic states broke free from Russian reign not with a civil war and bloodshed, but by dancing, singing and creating the Baltic Way - a 670 kilometre human chain holding hands from Tallinn, through Riga, to Vilnius. Singing and dancing is part of our culture as well, with the song and dance festival happening every 4 years, where 43 thousand people came to sing and dance.",
 				audio: "latvia.mp3",
 				id: "latvia"
 			},
 			{
 				question: "What is your favourite game?",
-				reply: "Even though Dagoth Ur is from Morrowind, and Skyrim being the more popular game, I prefer Oblivion. There is a certain charm to it. It's quests are fun and silly, the characters are perfect and the setting is great. Even if you play just one playthrough of it, even if you're an adult, you will still feel nostalgia for Oblivion, and that is an indicator for a quality game. Morrowind has something similar, but Skyrim doesn't. Maybe that is because I have played Skyrim more than the rest of the games, but Skyrim has always felt more bland in comparison. It takes itself too seriously and doesn't let people do a quest inside of a painting like Oblivion.",
+				reply: "Even though Dagoth Ur is from Morrowind, and Skyrim being the more popular game, I prefer Oblivion. There is a certain charm to it, it's quests are fun and silly, the characters are perfect and the setting is great. Even if you play just one playthrough of it, even if you're an adult, you will still feel nostalgia for Oblivion, and that is an indicator of a quality game. Morrowind has something similar, but Skyrim doesn't. Maybe that is because I have played Skyrim more than the rest of the games, but Skyrim has always felt more bland in comparison. It takes itself too seriously, and doesn't let people do a quest inside of a painting like Oblivion.",
 				audio: "game.mp3",
 				id: "game"
 			}
@@ -50,20 +54,32 @@
 	
 		const questions = [
 			{
-				question: "Before you go, I have some questions of my own. My first question is: Who are you really.",
+				question: "Before you go, I have some questions of my own. My first question is: Who are you?",
 				audio: "questions/first/question.mp3",
 				replies: [
 					{
-						answer: "An employed developer",
-						reply: "Then I salute you for your faithful service to your lord. And I curse you and your companies as my enemies, for your data stealing and spoiling the internet and degrading the attention-span of the entire human race.",
-						audio: "questions/first/answers/socialmedia.mp3",
+						answer: "A developer",
+						reply: "Well then, it is good to speak to another developer. It would be nice if we could speak; perhaps in my guild? I would appreciate a follow on Twitter as well, but that is your choice. Nevertheless, I thank you for visiting.",
+						audio: "questions/first/answers/developer.mp3",
 						id: "socialmedia"
 					},
-					{
-						answer: "A freelancer",
+                    {
+						answer: "A student",
+						reply: "A noble ambition. And anyone who pursues a higher education should be my friend. A pity we cannot meet eachother in real life.",
+						audio: "questions/first/answers/student.mp3",
+						id: "student"
+					},
+                    {
+						answer: "A musician",
 						reply: "While the industry is cold, hard and punishing, I hope you are holding up alright. You are an entertainer, one of the most important professions in the world. Without music the world would be dull and monotonous, but you are one of the many beautiful people who create, inspire and change the world for the better.",
-						audio: "questions/first/answers/freelancer.mp3",
-						id: "freelancer"
+						audio: "questions/first/answers/musician.mp3",
+						id: "musician"
+					},
+                    {
+						answer: "Not mentioned",
+						reply: "Duly noted.",
+						audio: "questions/first/answers/other.mp3",
+						id: "other"
 					}
 				]
 			},
@@ -82,8 +98,7 @@
 						reply: "I see. Thank you for reading my blog and being invested enough to go to my website. I hope that you can enjoy what I've made, whether that be one of my websites, APIs, packages or blog posts.",
 						audio: "questions/second/answers/blog.mp3",
 						id: "blog"
-					}
-					,
+					},
 					{
 						answer: "Through something you made",
 						reply: "I see. Thank you for already using something I've made. I hope that you enjoy it and can enjoy the rest of what I've made, whether that be one of my websites, APIs, packages or blog posts.",
@@ -102,6 +117,8 @@
 			if (!playingAudio.ended) playingAudio.pause()
 	
 			playingAudio = new Audio(path)
+
+            playingAudio.volume = 0.3
 	
 			document.getElementById("speechBubble").innerHTML = text
 	
@@ -109,18 +126,20 @@
 	
 			playingAudio.play()
 		}
+
+        const genButton = (id, text, ... attr) => {
+            return `<button aria-label="${id}" class="transition ease-in-out p-5 bg-black text-beige rounded-xl font-bold" ${attr}>${text}</button>`
+        }
 	
 		let base = "/dagoth/"
 	
-		const start = () => {
+		const start = () => { // Starts the whole thing with userQuestions
 	
-			document.getElementById("intro").outerHTML = ""
+			if (document.getElementById("intro")) document.getElementById("intro").outerHTML = ""
 	
 			playAudio(base + introduction.audio, introduction.reply)
 	
-			let html = userQuestions.map(q => (
-				`<button aria-label="${q.id}" class="transition ease-in-out p-5 bg-black text-beige rounded-xl font-bold">${q.question}</button>`
-			))
+			let html = userQuestions.map(q => (genButton(q.id, q.question)))
 	
 			document.getElementById("speechOptions").innerHTML = html.join("") + `<button aria-label="continue"  class="p-5 bg-black text-beige rounded-xl font-bold">[ Continue ]</button>`
 		}
@@ -130,9 +149,9 @@
 	
 			let dialogueOption = e.srcElement.attributes[0].value
 	
-			if (dialogueOption === "start") return
+			if (dialogueOption === "start") return // Start button is handled by start()
 	
-			if (dialogueOption.startsWith("1st_")) {
+			if (dialogueOption.startsWith("1st_")) { // questions[0]
 	
 				let q = questions[0].replies.find(item => item.id === dialogueOption.replace("1st_", ""))
 	
@@ -145,9 +164,7 @@
 	
 					playAudio(base +  questions[1].audio, questions[1].question)
 	
-					let html = questions[1].replies.map(q => (
-						`<button aria-label="2nd_${q.id}" class="p-5 bg-black text-beige rounded-xl font-bold">${q.answer}</button>`
-					))
+					let html = questions[1].replies.map(q => (genButton("2nd_" + q.id, q.answer)))
 	
 					document.getElementById("speechOptions").innerHTML = html.join("")
 				})
@@ -155,7 +172,7 @@
 				return
 			}
 	
-			if (dialogueOption.startsWith("2nd_")) {
+			if (dialogueOption.startsWith("2nd_")) { // questions[1]
 	
 				let q = questions[1].replies.find(item => item.id === dialogueOption.replace("2nd_", ""))
 	
@@ -165,14 +182,14 @@
 					await sleep(1000)
 	
 					playAudio(base + "more_to_say.mp3", "Have you something more to say? Actually, no, I am done talking with you. I hope you enjoyed this chat as we have nothing else to discuss. Goodbye.", () => {
-						document.getElementById("speechOptions").innerHTML = `<button aria-label="start" class="p-5 bg-black text-beige rounded-xl font-bold" onclick="start()">[ Restart ]</button>`
+						document.getElementById("speechOptions").innerHTML = genButton("start", "[ Restart ]", `onclick="start()"`)
 					})
 				})
 	
 				return
 			}
 	
-			if (dialogueOption !== "continue") {
+			if (dialogueOption !== "continue") { // userQuestions answers
 	
 				let q = userQuestions.find(item => item.id === dialogueOption)
 	
@@ -183,34 +200,22 @@
 				return
 			}
 	
-			if (dialogueOption === "continue") {
+			if (dialogueOption === "continue") { // [ Continue ]
 	
 				playAudio(base + questions[0].audio, questions[0].question)
 	
-				let html = questions[0].replies.map(q => (
-					`<button aria-label="1st_${q.id}" class="p-5 bg-black text-beige rounded-xl font-bold">${q.answer}</button>`
-				))
+				let html = questions[0].replies.map(q => (genButton(`1st_${q.id}`, q.answer)))
 	
 				document.getElementById("speechOptions").innerHTML = html.join("")
 	
 				return
-			}
-	
-			console.log(questions[0].replies, dialogueOption.replace("1st_", ""))
-	
-	
-	
+			}	
 		})
-		const playSound = (url) => {
-			new Audio("/dagoth/questions/second/answers/blog.mp3").play()
-	
-			document.getElementById("speechBubble").innerHTML = "I see. Thank you for reading my blog and being invested enough to go to my website. I hope that you can enjoy what I've made, whether that be one of my websites, APIs, packages or blog posts."
-		}
 	</script>
 </template>
 
 <script>
-	const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+	/*const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 	let entered: number[] = [];
 
 	document.addEventListener("keydown", (e) => {
@@ -220,9 +225,18 @@
 			entered = [];
 			testFunc();
 		}
-	});
+	});*/
 
-	function testFunc() {
+    document.getElementById("quoteicn")!.onclick = () => {
+        let main = document.getElementsByTagName("main")[0]
+
+		main.innerHTML = ""
+
+        // @ts-ignore I cba
+		main.appendChild(document.getElementById("konamicode")!.content.cloneNode(true))
+    }
+
+	/*function testFunc() {
 		console.log("Konami code entered!");
 
 		console.log(document.getElementsByClassName("d-section"))
@@ -235,5 +249,5 @@
 		
 
 		//window.location.href = "/AHJSdgas78d6sa78dasjhdgsadhjsagdjakshdghj"
-	}
+	}*/
 </script>
