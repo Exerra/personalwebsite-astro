@@ -10,6 +10,7 @@ import Quote from '../components/Quote.astro';
 import { Image, Picture } from '@astrojs/image/components';
 import work from '../data/work';
 import knowledge from '../data/knowledge';
+import Konami from '../components/eastereggs/konami.astro';
 
 const npm = await getNPMPackages()
 
@@ -24,7 +25,7 @@ let dates = {
 ---
 
 <Layout title="Exerra" description={`A full-stack developer from Latvia with ${dates.startedWebDev} of experience as a developer.`}>
-	<div class={"h-screen"}>
+	<div class={"h-screen d-section"}>
 		<Navbar />
 		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32 xl:pt-0 3xl:pt-32">
 			<Header />
@@ -141,3 +142,5 @@ let dates = {
 		</div>
 	</Section>
 </Layout>
+
+<Konami />
