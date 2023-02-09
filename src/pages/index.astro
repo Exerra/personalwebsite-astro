@@ -1,13 +1,13 @@
 ---
+import { Image, Picture } from '@astrojs/image/components';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
 import Section from '../components/Section.astro';
 import getNPMPackages from '../util/npm';
-import ProjectCard from '../components/ProjectCard.astro';
-import DarkCard from '../components/DarkCard.astro';
+import ProjectCard from '../components/cards/Project.astro';
+import DarkCard from '../components/cards/Dark.astro';
 import Quote from '../components/Quote.astro';
-import { Image, Picture } from '@astrojs/image/components';
 import work from '../data/work';
 import knowledge from '../data/knowledge';
 import Konami from '../components/eastereggs/konami.astro';

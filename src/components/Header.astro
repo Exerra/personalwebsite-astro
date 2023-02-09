@@ -1,5 +1,5 @@
 ---
-import Icon from "./Icon.astro";
+import FontawesomeIcon from "./icons/FontawesomeIcon.astro";
 import SocialButton from "./SocialButton.astro";
 import { faDiscord, faGithub, faMastodon, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
@@ -18,19 +18,19 @@ import { faDiscord, faGithub, faMastodon, faTwitter } from "@fortawesome/free-br
 
         <div class="bg-theme text-gray-400 font-bold text-center items-center md:text-left fill-blue-400 space-x-5">
             <SocialButton href={"https://twitter.com/Exerra"} label={"Link to twitter"}>
-                <Icon icon={faTwitter} class="w-10 h-10 inline-flex" />
+                <FontawesomeIcon icon={faTwitter} class="w-10 h-10 inline-flex" />
             </SocialButton>
 
             <SocialButton href={"https://github.com/Exerra"} label={"Link to github"}>
-                <Icon icon={faGithub} class="w-10 h-10 inline-flex" />
+                <FontawesomeIcon icon={faGithub} class="w-10 h-10 inline-flex" />
             </SocialButton>
 
             <SocialButton href={"https://s.exerra.xyz/discord"} label={"Link to my discord server"}>
-                <Icon icon={faDiscord} class="w-12 h-10 inline-flex" />
+                <FontawesomeIcon icon={faDiscord} class="w-12 h-10 inline-flex" />
             </SocialButton>
 
             <SocialButton href={"https://mastodon.world/@exerra"} label={"Link to mastodon"} rel={"me"}>
-                <Icon icon={faMastodon} class="w-10 h-10 inline-flex" />
+                <FontawesomeIcon icon={faMastodon} class="w-10 h-10 inline-flex" />
             </SocialButton>
         </div>
     </div>

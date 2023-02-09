@@ -1,4 +1,12 @@
 ---
+interface Props {
+    date?: number | string,
+    name: string,
+    description: string,
+    href: string,
+    label: string
+}
+
 const { date, name, description, href, label } = Astro.props
 ---
 
