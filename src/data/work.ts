@@ -1,5 +1,11 @@
 const work = [
 	{
+		date: "2023",
+		name: "ChromeOS releases",
+		description: "Download the latest ChromeOS BIN files without using the recovery utility. This website is not affiliated with Google",
+		url: "https://chromeos.exerra.xyz"
+	},
+	{
 		date: "2022",
 		name: "Utilities",
 		description: "Various utilities that might come in handy, such as the Aspect Ratio Calculator, download time calculator and death/birth coefficient calculator",
