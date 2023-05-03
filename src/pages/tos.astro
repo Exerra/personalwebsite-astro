@@ -1,0 +1,65 @@
+---
+import { Image } from '@astrojs/image/components';
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="General TOS" description={`General Terms Of Service for all Exerra products and services, unless specified otherwise.`}>
+    <div class={"h-screen d-section"}>
+		<Navbar />
+		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32 xl:pt-0 3xl:pt-32">
+			<div class={"container justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full my-auto"}>
+                <div class={"lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36"}>
+                    <h1 class={"font-bold text-7xl lg:text-9xl text-center md:text-left"}>TOS</h1>
+                    
+                    <br/>
+            
+                    <p class={"font-bold text-2xl lg:text-3xl text-center md:text-left text-black/60"}>Generic Terms Of Service for all Exerra services.</p>
+                </div>
+            </div>
+			<div class="md:hidden lg:my-auto lg:ml-auto relative lg:block mt-16 flex flex-row">
+				<Image
+					src={"/sunset.jpeg"} 
+					format={"webp"} 
+					height={600} 
+					width={600} 
+					alt="Decorative image of a sunset"
+					class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" 
+					loading={"eager"}
+				/>
+
+				<p class="text-right font-bold -rotate-90 absolute right-0 bottom-52 -m-7 lg:hidden">← scroll down</p>
+			</div>
+		</header>
+	</div>
+
+    <div class="mx-8 md:mx-24 lg:mx-52 text-xl">
+        <p class="font-bold text-2xl mb-3">Thank you for choosing Exerra services. By accessing and using our services, you agree to be bound by the following terms and conditions:</p>
+        <ol class="">
+            <li>1. <strong>Eligibility:</strong> You must be at least 18 years old or have the legal capacity to enter into an agreement in your jurisdiction to use our services.</li>
+            <li>2. <strong>Data Collection and Usage:</strong> By using our services, you acknowledge and agree that we may collect, use, process, and store your personal data for various purposes, such as to provide you with our services, improve our services, and comply with legal obligations. Your personal data may be shared with other products within the Exerra ecosystem, unless specified otherwise by the service.</li>
+            <li>3. <strong>Data Removal:</strong> If you wish to have your data removed from our systems, please send a data removal request to gdpr@exerra.xyz. We will process your request in accordance with applicable laws and regulations.</li>
+            <li>4. <strong>Intellectual Property:</strong> All content, trademarks, logos, and intellectual property owned or licensed by Exerra are protected by applicable intellectual property laws. You agree not to use any of our intellectual property without our prior written consent.</li>
+            <li>5. <strong>Limitation of Liability:</strong> Exerra shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from your use or inability to use our services, including but not limited to, loss of profits, loss of data, or business interruption.</li>
+            <li>6. <strong>Indemnification:</strong> You agree to indemnify and hold Exerra and its affiliates, officers, directors, employees, and agents harmless from and against any claims, liabilities, damages, losses, and expenses arising out of your use of our services or any violation of these terms and conditions.</li>
+            <li>7. <strong>Changes to Terms of Service:</strong> Exerra reserves the right to modify or update these terms of service at any time without prior notice. Your continued use of our services after such modifications or updates shall constitute your acceptance of the revised terms of service.</li>
+            <li>8. <strong>Governing Law:</strong> These terms of service shall be governed by and construed in accordance with the laws of the jurisdiction in which Exerra is located, without giving effect to its conflict of law principles.</li>
+        </ol>
+        <p class="font-bold mt-3">If you have any questions or concerns regarding these terms of service, please contact us at support@exerra.xyz.</p>
+    </div>
+</Layout>
+
+<style>
+    h1::first-letter {
+        margin-left: -0.075em;
+    }
+
+    h2::first-letter {
+        margin-left: -0.075em;
+    }
+
+    li {
+        margin-bottom: 3px;
+    }
+</style>
