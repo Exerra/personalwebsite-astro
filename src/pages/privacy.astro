@@ -1,0 +1,108 @@
+---
+import { Image } from '@astrojs/image/components';
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Privacy" description={`Generic privacy policy for all Exerra products and services.`}>
+    <div class={"h-screen d-section"}>
+		<Navbar />
+		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32 xl:pt-0 3xl:pt-32">
+			<div class={"container justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full my-auto"}>
+                <div class={"lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36"}>
+                    <h1 class={"font-bold text-7xl lg:text-9xl text-center md:text-left"}>Privacy</h1>
+                    
+                    <br/>
+            
+                    <p class={"font-bold text-2xl lg:text-3xl text-center md:text-left text-black/60"}>Generic privacy policy for all Exerra services.</p>
+                </div>
+            </div>
+			<div class="md:hidden lg:my-auto lg:ml-auto relative lg:block mt-16 flex flex-row">
+				<Image
+					src={"/sunset.jpeg"} 
+					format={"webp"} 
+					height={600} 
+					width={600} 
+					alt="Decorative image of a sunset"
+					class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" 
+					loading={"eager"}
+				/>
+
+				<p class="text-right font-bold -rotate-90 absolute right-0 bottom-52 -m-7 lg:hidden">← scroll down</p>
+			</div>
+		</header>
+	</div>
+
+    <div class="mx-8 md:mx-24 lg:mx-52 text-xl">
+        <p class="font-bold mb-3">Effective Date: 2023-05-03</p>
+  
+        <h2 class="font-bold text-3xl mb-3 mt-6">Information We Collect</h2>
+        <p class="font-bold">We may collect the following types of information from you when you use our services:</p>
+        <ul>
+            <li>Personal information that can be used to identify you, such as your name, email address, phone number, and billing information.</li>
+            <li>Usage information about how you interact with our services, such as the pages you visit, the features you use, and the time and date of your visit.</li>
+            <li>Device information about the device you use to access our services, such as your IP address, browser type and version, and operating system.</li>
+            <li>Location information about your device, such as your country or region, when you access our services.</li>
+        </ul>
+        <p>We collect this information from you when you provide it to us directly, when you use our services, or when we obtain it from third-party sources.</p>
+        
+        <h2 class="font-bold text-3xl mb-3 mt-6">How We Use Your Information</h2>
+        <p class="font-bold">We use your personal information for the following purposes:</p>
+        <ul>
+            <li>To provide and improve our services, including to personalize your experience and to respond to your inquiries and requests.</li>
+            <li>To communicate with you about our services and updates.</li>
+            <li>To enforce our terms and conditions and to prevent fraudulent or illegal activities.</li>
+            <li>To comply with legal obligations and to protect our rights and interests.</li>
+        </ul>
+
+        <p>We may also use your information for research and analysis purposes, to develop and improve our services and products, and to provide you with personalized content and advertising.</p>
+        
+        <h2 class="font-bold text-3xl mb-3 mt-6">How We Share Your Information</h2>
+        <p class="font-bold">We may share your personal information with the following types of third parties:</p>
+        <ul>
+            <li>Service providers, such as hosting providers, payment processors, and analytics providers, who assist us in providing and improving our services.</li>
+            <li>Business partners, such as advertising and marketing partners, who help us provide you with personalized content and advertising.</li>
+            <li>Legal and regulatory authorities, such as law enforcement agencies and government authorities, when required by law or to protect our rights and interests.</li>
+            <li>Affiliates and subsidiaries, such as companies in the Exerra ecosystem, to provide and improve our services and products.</li>
+        </ul>
+        <p>We may also share your information with other third parties with your consent or as otherwise described to you at the time of collection.</p>
+        
+        <h2 class="font-bold text-3xl mb-3 mt-6">Your Rights and Choices</h2>
+        <p>You have the right to access, correct, or delete your personal information that we have collected, subject to certain exceptions and limitations. You can exercise these rights by contacting us at gdpr@exerra.xyz.</p><br />
+        <p>You can also choose to opt-out of certain types of data processing, such as receiving marketing communications, by following the instructions provided in the communication or by contacting us at gdpr@exerra.xyz.</p><br />
+        <p>Please note that we may need to retain certain information for record-keeping purposes or to comply with our legal obligations, and we may also need to retain some of your information to continue providing you with our services.</p>
+
+        <h2 class="font-bold text-3xl mb-3 mt-6">Security of Your Information</h2>
+        <p>We take reasonable measures to protect your personal information from unauthorized access, use, disclosure, alteration, or destruction. However, no security measure is perfect, and we cannot guarantee the security of your information.</p>
+
+        <h2 class="font-bold text-3xl mb-3 mt-6">International Data Transfers</h2>
+        <p>Your personal information may be transferred to, and processed in, countries other than the country in which you are located. These countries may have data protection laws that are different from those of your country. By using our services, you consent to the transfer of your information to these countries.</p>
+
+        <h2 class="font-bold text-3xl mb-3 mt-6">Changes to this Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. If we make material changes to this Privacy Policy, we will notify you by email or by posting a notice on our website. We encourage you to review this Privacy Policy periodically to stay informed about our data practices.</p>
+
+        <h2 class="font-bold text-3xl mb-3 mt-6">Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at gdpr@exerra.xyz.</p>
+    </div>
+</Layout>
+
+<style>
+    h1::first-letter {
+        margin-left: -0.075em;
+    }
+
+    h2::first-letter {
+        margin-left: -0.075em;
+    }
+
+    li {
+        margin-bottom: 3px;
+        list-style:circle;
+        list-style-position: inside;
+    }
+
+    ul {
+        margin-bottom: 0.75rem;
+    }
+</style>
