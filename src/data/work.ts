@@ -1,6 +1,18 @@
 const work = [
 	{
 		date: "2023",
+		name: "GetSummary.tech",
+		description: "Email summaries in seconds. Just forward your email and enjoy the magic, no extensions needed.",
+		url: "https://getsummary.tech"
+	},
+	{
+		date: "Since 2023",
+		name: "Terzet.lv",
+		description: "Latvian Mastodon instance. Anyone who wants to tell something and read what others are doing is welcome.",
+		url: "https://terzet.lv"
+	},
+	{
+		date: "2023",
 		name: "ChromeOS releases",
 		description: "Download the latest ChromeOS BIN files without using the recovery utility. This website is not affiliated with Google",
 		url: "https://chromeos.exerra.xyz"
@@ -35,6 +47,6 @@ const work = [
 		description: "Multi-purpose Discord bot featuring commands for server moderation, sub-reddits, Karen Bot profiles, Spotify songs/albums/artists and more. (EOL)",
 		url: "https://karen.exerra.xyz"
 	}
-]
+] as Array<{ date: string, name: string, description: string, url: string }>
 
 export default work
