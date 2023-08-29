@@ -10,5 +10,6 @@ import image from "@astrojs/image";
 export default defineConfig({
   integrations: [tailwind(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  })]
+  })],
+  site: "https://exerra.xyz"
 });
