@@ -8,7 +8,7 @@ const work = [
 	{
 		date: "Since 2023",
 		name: "Terzet.lv",
-		description: "Latvian Mastodon instance. Anyone who wants to tell something and read what others are doing is welcome.",
+		description: "(Temporarily down) Latvian Mastodon instance. Anyone who wants to tell something and read what others are doing is welcome.",
 		url: "https://terzet.lv"
 	},
 	{
@@ -18,10 +18,10 @@ const work = [
 		url: "https://chromeos.exerra.xyz"
 	},
 	{
-		date: "2022",
-		name: "Utilities",
-		description: "Various utilities that might come in handy, such as the Aspect Ratio Calculator, download time calculator and death/birth coefficient calculator",
-		url: "https://utilities.exerra.xyz"
+		date: "2023",
+		name: "Tools",
+		description: "Various tools that might come in handy, such as the Aspect Ratio Calculator, download time calculator and death/birth coefficient calculator",
+		url: "https://tools.exerra.xyz"
 	},
 	{
 		date: "2022",
