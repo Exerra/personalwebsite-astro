@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from '@astrojs/image/components';
+import { Image, Picture } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
@@ -11,6 +11,8 @@ import Quote from '../components/Quote.astro';
 import work from '../data/work';
 import knowledge from '../data/knowledge';
 import Konami from '../components/eastereggs/konami.astro';
+
+import sailboat from "../../public/sailboat.jpeg"
 
 const npm = await getNPMPackages()
 
@@ -84,7 +86,15 @@ let dates = {
 		<div class="grid md:grid-cols-1 lg:grid-cols-2">
 			<div class="sm:hidden mr-auto relative flex flex-row">
 				<p class="text-left font-bold -rotate-90 absolute left-0 bottom-36 mr-7 pb-16 text-beige">← keep scrolling</p>
-				<Picture src={import("../../public/sailboat.jpeg")} formats={["webp", "png"]} sizes={"(max-width: 700px"} height={700} widths={[400, 600, 700]}  alt="Decorative image of a sailboat" class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] rounded-bl-[115px] ml-auto left-0" />
+				<Picture 
+					src={import("../../public/sailboat.jpeg")} 
+					formats={["webp", "png"]} 
+					sizes={"(max-width: 700px"}
+					height={700} 
+					widths={[400, 600, 700]}  
+					alt="Decorative image of a sailboat" 
+					class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] rounded-bl-[115px] ml-auto left-0" 
+				/>
 			</div>
 			<div class={`mt-12 mx-8 mb-12 md:mt-24 md:mx-24 lg:mb-0 lg:mt-52 lg:ml-52 lg:mr-0`}>
 				<h2 class="font-bold text-4xl md:text-6xl lg:text-8xl">My projects</h2>
@@ -94,7 +104,15 @@ let dates = {
 				</p>
 			</div>
 			<div class="hidden lg:block ml-auto">
-				<Picture src={import("../../public/sailboat.jpeg")} formats={["webp", "png"]} sizes={"(max-width: 700px"} height={700} widths={[400, 600, 700]}  alt="Decorative image of a sailboat" class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] rounded-bl-[115px] ml-auto left-0" />
+				<Picture 
+					src={sailboat} 
+					formats={["webp", "png"]} 
+					sizes={"(max-width: 700px"} 
+					height={700} 
+					widths={[400, 600, 700]}  
+					alt="Decorative image of a sailboat" 
+					class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] rounded-bl-[115px] ml-auto left-0" 
+				/>
 			</div>
 		</div>
 
