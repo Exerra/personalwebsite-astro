@@ -1,10 +1,10 @@
 const work = [
-	{
-		date: "2023",
-		name: "GetSummary.tech",
-		description: "Email summaries in seconds. Just forward your email and enjoy the magic, no extensions needed.",
-		url: "https://getsummary.tech"
-	},
+	// {
+	// 	date: "2023",
+	// 	name: "GetSummary.tech",
+	// 	description: "Email summaries in seconds. Just forward your email and enjoy the magic, no extensions needed.",
+	// 	url: "https://getsummary.tech"
+	// },
 	{
 		date: "Since 2023",
 		name: "Terzet.lv",
