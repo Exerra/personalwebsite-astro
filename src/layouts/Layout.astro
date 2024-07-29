@@ -20,6 +20,7 @@ const { title, description, image } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 
 		<link rel="me" href="https://indieweb.social/@exerra" />
+		<link rel="me" href="https://daedric.world/@exerra" />
 
 		<SEO 
 			title={title}
@@ -54,8 +55,6 @@ const { title, description, image } = Astro.props;
 		<main><slot /></main>
 		<footer class={"p-10 gap-3 text-center flex flex-col"}>
 			<p class="font-bold">&copy; Exerra</p>
-
-			<a href={"/privacy"} class={"transition text-grey-card/60 hover:text-grey-card after:content-['_↗']"}>Privacy Policy</a>
 
 			<a target="_blank" href="https://uptime.betterstack.com"><img style="width: 130px; height: 52px;" alt="Better Stack Website Monitoring" src="https://uptime.betterstack.com/assets/static_assets/badges/light.png" class="mx-auto" /></a>
 		</footer>
