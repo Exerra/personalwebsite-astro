@@ -6,10 +6,10 @@ const work = [
 	// 	url: "https://getsummary.tech"
 	// },
 	{
-		date: "Since 2023",
-		name: "Terzet.lv",
-		description: "(Temporarily down) Latvian Mastodon instance. Anyone who wants to tell something and read what others are doing is welcome.",
-		url: "https://terzet.lv"
+		date: "Since 2024",
+		name: "Daedric World",
+		description: "Elder Scrolls themed federated Sharkey (Misskey fork with Mastodon API) instance. Anyone is welcome to join.",
+		url: "https://daedric.world"
 	},
 	{
 		date: "2023",
