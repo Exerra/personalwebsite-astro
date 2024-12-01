@@ -1,7 +1,7 @@
 ---
 import FontawesomeIcon from "./icons/FontawesomeIcon.astro";
 import SocialButton from "./SocialButton.astro";
-import { faDiscord, faGithub, faMastodon, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faDiscord, faGithub, faMastodon, faTwitter, faBluesky } from "@fortawesome/free-brands-svg-icons"
 
 ---
 
@@ -21,16 +21,16 @@ import { faDiscord, faGithub, faMastodon, faTwitter } from "@fortawesome/free-br
                 <FontawesomeIcon icon={faTwitter} class="w-10 h-10 inline-flex" />
             </SocialButton> -->
 
-            <SocialButton href={"https://daedric.world/@exerra"} label={"Link to mastodon"} rel={"me"}>
+            <SocialButton href={"https://daedric.world/@exerra"} label={"Link to Mastodon"} rel={"me"}>
                 <FontawesomeIcon icon={faMastodon} class="w-10 h-10 inline-flex" />
             </SocialButton>
 
-            <SocialButton href={"https://github.com/Exerra"} label={"Link to github"}>
-                <FontawesomeIcon icon={faGithub} class="w-10 h-10 inline-flex" />
+            <SocialButton href={"https://bsky.app/exerra.xyz"} label={"Link to Bluesky"}>
+                <FontawesomeIcon icon={faBluesky} class="w-12 h-10 inline-flex" />
             </SocialButton>
 
-            <SocialButton href={"https://s.exerra.xyz/discord"} label={"Link to my Discord server"}>
-                <FontawesomeIcon icon={faDiscord} class="w-12 h-10 inline-flex" />
+            <SocialButton href={"https://github.com/Exerra"} label={"Link to Github"}>
+                <FontawesomeIcon icon={faGithub} class="w-10 h-10 inline-flex" />
             </SocialButton>
 
             <!-- <div class="hidden">
