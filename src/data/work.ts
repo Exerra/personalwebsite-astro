@@ -7,8 +7,14 @@ const work = [
 	// },
 	{
 		date: "Since 2024",
+		name: "Mastodon to Misskey bridge",
+		description: "Bridge that converts Mastodon API calls to Misskey calls in order to use Mastodon clients. Work in progress.",
+		url: "https://github.com/Exerra/mastodon-to-misskey"
+	},
+	{
+		date: "Since 2024",
 		name: "Daedric World",
-		description: "Elder Scrolls themed federated Sharkey (Misskey fork with Mastodon API) instance. Anyone is welcome to join.",
+		description: "Elder Scrolls themed federated fediverse instance, Bluesky PDS & fediverse relay. Anyone is welcome to join. Fediverse members get access to the PDS.",
 		url: "https://daedric.world"
 	},
 	{

@@ -26,7 +26,7 @@ let dates = {
 
 ---
 
-<Layout title="Savičs" description={`A full-stack developer from Latvia with ${dates.startedWebDev} years of experience as a developer.`}>
+<Layout title="Savičs" description={`Full-stack developer from Latvia with many years of experience. Want to find out what I can do? Book a call.`}>
 	<div class={"h-screen d-section"}>
 		<Navbar />
 		<header class="grid lg:grid-cols-2 mt-12 lg:mt-16 lg:pt-32 xl:pt-0 3xl:pt-32">
@@ -66,10 +66,14 @@ let dates = {
 					If you wish to hire me, please contact me thru any platform with your idea.
 				</DarkCard>
 	
-				<DarkCard title="Hobbies">
+				<!-- <DarkCard title="Hobbies">
 					I have a professional education in music, and I enjoy playing the saxophone and piano in my free time.
 					I haven't released any music yet, but that might change soon.
 					In addition to music, I also enjoy playing video games, particularly RPGs (especially those by Bethesda) and stealth games.
+				</DarkCard> -->
+
+				<DarkCard title="Ideals">
+					I believe in decentralised social media and a decentralised presence on the internet. Want to have your own space on the internet? Your own website or social media server? <b>Book a call, let's talk.</b>
 				</DarkCard>
 			</div>
 
@@ -155,7 +159,7 @@ let dates = {
 				<div class={"w-full grow lg:basis-1/5 shadow-2xl bg-grey-card text-beige rounded-[35px] p-6"}>
 					<h2 class="text-3xl font-bold">{knowledge.name}</h2>
 					<hr class="border-2 border-beige rounded-xl my-2" />
-					<h3 class={"text-xl font-bold"}>{knowledge.type} used in development {knowledge.override ?? "to"} {knowledge.used}</h3>
+					<h3 class={"text-lg"}>{knowledge.type} used in development {knowledge.override ?? "to"} {knowledge.used}</h3>
 				</div>
 			))}
 		</div>

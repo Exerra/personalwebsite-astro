@@ -1,0 +1,47 @@
+<!-- ! BIIIIIIIIG WORK IN PROGRESS -->
+
+<div class={"w-full basis-1/1 grow lg:basis-1/3 shadow-2xl bg-grey-card text-beige rounded-[35px] overflow-hidden hoverable"}>
+    <img alt={""} class="waves" src={"/waves.svg"} height={200} width={200} loading={"lazy"} decoding={"async"} />
+    <div class="p-6">
+        <p class="">Cal.com</p>
+        <h3 class="text-3xl font-bold">Book a call</h3>
+
+        <hr class="border-2 border-beige border-0 rounded-xl my-2" />
+
+        <p>Schedule a Google Meet call with me.</p>
+
+        <button 
+            class={"transition ease-in-out text-beige/80 text-lg font-bold hover:text-beige after:content-['_↗'] mt-5"}
+            data-cal-link="exerra/project-idea"
+            data-cal-namespace="project-idea"
+            data-cal-config='{"layout":"month_view"}'
+        >
+            Schedule
+        </button>
+    </div>
+</div>
+
+<!-- With Tailwind it has some weird funkyness so for now ima just use style -->
+<style>
+    div {
+        position:relative;
+    }
+    .waves {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
+
+<script type="text/javascript">
+	(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "project-idea", {origin:"https://cal.com"});
+  
+	
+	// Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+	// `data-cal-link="exerra/project-idea"`
+	// data-cal-namespace="project-idea"
+	// `data-cal-config='{"layout":"month_view"}'`
+  
+	Cal.ns["project-idea"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#494949"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
