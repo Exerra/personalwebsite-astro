@@ -29,12 +29,12 @@ const work = [
 		description: "Various tools that might come in handy, such as the Aspect Ratio Calculator, download time calculator and death/birth coefficient calculator",
 		url: "https://tools.exerra.xyz"
 	},
-	{
-		date: "2022",
-		name: "Shortener",
-		description: "Quick and secure URL service integrating Exerra Phishing Check for unparalleled user protection",
-		url: "https://s.exerra.xyz"
-	},
+	// {
+	// 	date: "2022",
+	// 	name: "Shortener",
+	// 	description: "Quick and secure URL service integrating Exerra Phishing Check for unparalleled user protection",
+	// 	url: "https://s.exerra.xyz"
+	// },
 	{
 		date: "2022",
 		name: "Mod viewer",
@@ -47,12 +47,12 @@ const work = [
 		description: "API for checking if links are known phishing attempts",
 		url: "https://s.exerra.xyz/exerraphishingcheck"
 	},
-	{
-		date: "Since 2019",
-		name: "Karen Bot",
-		description: "Multi-purpose Discord bot featuring commands for server moderation, sub-reddits, Karen Bot profiles, Spotify songs/albums/artists and more. (EOL)",
-		url: "https://karen.exerra.xyz"
-	}
+	// {
+	// 	date: "Since 2019",
+	// 	name: "Karen Bot",
+	// 	description: "Multi-purpose Discord bot featuring commands for server moderation, sub-reddits, Karen Bot profiles, Spotify songs/albums/artists and more. (EOL)",
+	// 	url: "https://karen.exerra.xyz"
+	// }
 ] as Array<{ date: string, name: string, description: string, url: string }>
 
 export default work
