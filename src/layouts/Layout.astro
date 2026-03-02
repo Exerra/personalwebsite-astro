@@ -22,6 +22,9 @@ const { title, description, image } = Astro.props;
 		<link rel="me" href="https://indieweb.social/@exerra" />
 		<link rel="me" href="https://daedric.world/@exerra" />
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
 		<SEO 
 			title={title}
 			description={description}
@@ -54,7 +57,7 @@ const { title, description, image } = Astro.props;
 		<Cursor />
 		<main><slot /></main>
 		<footer class={"p-10 gap-3 text-center flex flex-col"}>
-			<p class="font-bold">&copy; Savičs</p>
+			<p class="font-bold uppercase tracking-wider text-sm">&copy; Savičs</p>
 
 			<a target="_blank" href="https://uptime.betterstack.com"><img style="width: 130px; height: 52px;" alt="Better Stack Website Monitoring" src="https://uptime.betterstack.com/assets/static_assets/badges/light.png" class="mx-auto" /></a>
 		</footer>
@@ -62,14 +65,10 @@ const { title, description, image } = Astro.props;
 </html>
 
 <style is:inline>
-	@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 	html {
-		font-family: "Inria Sans", sans-serif;
-	}
-
-	.font-display {
-		font-family: "Playfair Display", Georgia, serif;
+		font-family: "Inter", system-ui, sans-serif;
 	}
 
 	/* Scroll-triggered fade-in animation */
@@ -81,6 +80,14 @@ const { title, description, image } = Astro.props;
 	.fade-section.is-visible {
 		opacity: 1;
 		transform: translateY(0);
+	}
+
+	/* Marathon-inspired angular clip paths */
+	.clip-angular {
+		clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+	}
+	.clip-angular-img {
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
 	}
 </style>
 

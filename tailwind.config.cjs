@@ -8,11 +8,10 @@ module.exports = {
                 highlight: "rgb(192 132 252)",
 				beige: "#F2EDE3",
 				"grey-card": "#494949",
-				accent: "#c4956a"
+				accent: "#E85D26"
 			},
 			fontFamily: {
-				display: ['"Playfair Display"', 'Georgia', 'serif'],
-				body: ['"Inria Sans"', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			screens: {
 				'3xl': '1600px'
