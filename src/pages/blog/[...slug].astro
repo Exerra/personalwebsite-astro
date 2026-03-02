@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={`${post.data.title} - Exerra`} description={post.data.description} image={post.data.image}>
+	<Navbar />
+	<div class="mt-32 justify-between mx-auto w-full px-8 2xl:px-36 d-section">
+		<h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-3">{post.data.title}</h1>
+		<p class="text-grey-card/60 text-xl mb-8">
+			{post.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+		</p>
+		{post.data.image && (
+			<img src={post.data.image} alt={post.data.imagealt || post.data.title} class="w-full rounded-[35px] mb-8 shadow-2xl" />
+		)}
+		<article class="shadow-2xl bg-grey-card text-beige rounded-[35px] overflow-hidden relative p-8 md:p-12">
+			<img alt="" class="waves" src="/waves.svg" height="200" width="200" loading="lazy" decoding="async" />
+			<div class="prose prose-lg max-w-none prose-headings:text-beige prose-p:text-beige prose-li:text-beige prose-strong:text-beige prose-a:text-selected-text prose-a:no-underline hover:prose-a:underline prose-img:rounded-[35px] prose-code:text-beige prose-blockquote:text-beige/80 prose-blockquote:border-beige/40 prose-hr:border-beige/20">
+				<Content />
+			</div>
+		</article>
+	</div>
+</Layout>
+
+<style>
+	article {
+		position: relative;
+	}
+	.waves {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+</style>

@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Section from '../../components/Section.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<Layout title="Blog - Exerra" description="Blog posts by Exerra, a full-stack developer from Latvia.">
+	<Navbar />
+	<Section name="Blog">
+		<div class="flex flex-wrap gap-7 text-left">
+			{posts.map((post) => (
+				<a href={`/blog/${post.id}`} class="group w-full grow lg:basis-1/3 block">
+					<article class="shadow-2xl bg-grey-card text-beige rounded-[35px] overflow-hidden h-full flex flex-col justify-between relative">
+						<img alt="" class="waves" src="/waves.svg" height="200" width="200" loading="lazy" decoding="async" />
+						<div class="p-6">
+							<h2 class="text-3xl font-bold group-hover:text-selected-text transition">{post.data.title}</h2>
+							<hr class="border-2 border-beige rounded-xl my-2" />
+							<p class="text-beige/60 text-sm">
+								{post.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+							</p>
+							<p class="text-lg mt-2">{post.data.description}</p>
+						</div>
+					</article>
+				</a>
+			))}
+		</div>
+	</Section>
+</Layout>
+
+<style>
+	article {
+		position: relative;
+	}
+	.waves {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+</style>
