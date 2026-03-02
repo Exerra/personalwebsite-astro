@@ -93,7 +93,7 @@ const { title, description, image } = Astro.props;
 					entry.target.classList.add("is-visible");
 				}
 			});
-		}, { threshold: 0.12 });
+		}, { threshold: 0.12 }); // trigger when ~12% of the element is visible
 		document.querySelectorAll(".fade-section").forEach(el => observer.observe(el));
 	});
 </script>
