@@ -38,17 +38,17 @@ let dates = {
 					height={600} 
 					width={600} 
 					alt="Decorative image of a sunset"
-					class="rounded-tr-[115px] lg:rounded-tl-[115px] lg:rounded-tr-[0px] pr-10 lg:pr-0" 
+					class="clip-angular-img pr-10 lg:pr-0" 
 					loading={"eager"}
 				/>
 
-				<p class="text-right font-bold -rotate-90 absolute right-0 bottom-52 -m-7 lg:hidden">← scroll down</p>
+				<p class="text-right font-bold uppercase tracking-widest text-xs -rotate-90 absolute right-0 bottom-52 -m-7 lg:hidden">← scroll down</p>
 			</div>
 		</header>
 	</div>
 
 	<Section name="About me">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 fade-section">
 			<div class={"flex flex-wrap gap-6 transition ease-in-out"}>
 				<DarkCard title="Bio">
 					I am a full-stack developer from
@@ -84,10 +84,10 @@ let dates = {
 		</div>
 	</Section>
 
-	<section class="bg-black mt-52 pb-12 md:pb-24 lg:pb-36 rounded-tl-[60px] rounded-br-[60px] lg:rounded-tl-[90px] lg:rounded-br-[90px] text-beige text-left blackArea">
+	<section class="bg-black mt-52 pb-12 md:pb-24 lg:pb-36 clip-angular text-beige text-left blackArea">
 		<div class="grid md:grid-cols-1 lg:grid-cols-2">
 			<div class="sm:hidden mr-auto relative flex flex-row">
-				<p class="text-left font-bold -rotate-90 absolute left-0 bottom-36 mr-7 pb-16 text-beige">← keep scrolling</p>
+				<p class="text-left font-bold uppercase tracking-widest text-xs -rotate-90 absolute left-0 bottom-36 mr-7 pb-16 text-beige">← keep scrolling</p>
 				<Picture
 					src={sailboat} 
 					formats={["webp", "png"]} 
@@ -95,11 +95,12 @@ let dates = {
 					height={700} 
 					widths={[400, 600, 700]}  
 					alt="Decorative image of a sailboat" 
-					class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] rounded-bl-[115px] ml-auto left-0" 
+					class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] clip-angular-img ml-auto left-0" 
 				/>
 			</div>
 			<div class={`mt-12 mx-8 mb-12 md:mt-24 md:mx-24 lg:mb-0 lg:mt-52 lg:ml-52 lg:mr-0`}>
-				<h2 class="font-bold text-4xl md:text-6xl lg:text-8xl">My projects</h2>
+				<h2 class="font-black text-4xl md:text-6xl lg:text-8xl tracking-tighter uppercase">My projects</h2>
+				<div class="h-1 w-16 bg-accent mt-4"></div>
 				<p class="mt-10 text-3xl">
 					I've built things ranging from NPM packages, websites, apps, APIs and more.
 					<b>Here are a few of my favourite projects & my NPM packages</b>.
@@ -113,14 +114,14 @@ let dates = {
 					height={700} 
 					widths={[400, 600, 700]}  
 					alt="Decorative image of a sailboat" 
-					class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] rounded-bl-[115px] ml-auto left-0" 
+					class="pl-[55px] w-[400px] lg:h-[400px] lg:w-[400px] xl:h-[600px] xl:w-[600px] 2xl:h-[700px] 2xl:w-[700px] clip-angular-img ml-auto left-0" 
 				/>
 			</div>
 		</div>
 
-		<section class="mt-12 mx-8 mb-12 md:mx-24 lg:mx-52">
+		<section class="mt-12 mx-8 mb-12 md:mx-24 lg:mx-52 fade-section">
 			<div>
-				<h3 class="font-bold text-3xl md:text-5xl lg:text-6xl mb-12">Websites & APIs</h3>
+				<h3 class="font-black text-3xl md:text-5xl lg:text-6xl mb-12 uppercase tracking-tight">Websites & APIs</h3>
 				<div class={"flex flex-wrap gap-7 text-left"}>
 					{work.map(({ date, name, description, url }) => (
 						<ProjectCard 
@@ -135,7 +136,7 @@ let dates = {
 			</div>
 
 			<div class="mt-24">
-				<h3 class="font-bold text-3xl md:text-5xl lg:text-6xl mb-12">NPM packages</h3>
+				<h3 class="font-black text-3xl md:text-5xl lg:text-6xl mb-12 uppercase tracking-tight">NPM packages</h3>
 				<div class={"flex flex-wrap gap-7 text-left"}>
 					{npm.packages.objects.map(({ created, name, description }) => (
 						<ProjectCard 
@@ -152,12 +153,12 @@ let dates = {
 	</section>
 
 	<Section name="Knowledge">
-		<div class={"flex gap-6 flex-wrap"}>
+		<div class={"flex gap-6 flex-wrap fade-section"}>
 			{knowledge.map(knowledge => (
-				<div class={"w-full grow lg:basis-1/5 shadow-2xl bg-grey-card text-beige rounded-[35px] p-6"}>
-					<h2 class="text-3xl font-bold">{knowledge.name}</h2>
-					<hr class="border-2 border-beige rounded-xl my-2" />
-					<h3 class={"text-lg"}>{knowledge.type} used in development {knowledge.override ?? "to"} {knowledge.used}</h3>
+				<div class={"w-full grow lg:basis-1/5 shadow-2xl bg-grey-card text-beige rounded-sm p-6 border-t-2 border-accent"}>
+					<h2 class="text-2xl font-black uppercase tracking-wide">{knowledge.name}</h2>
+					<hr class="border-2 border-accent my-2 w-10" />
+					<h3 class={"text-base"}>{knowledge.type} used in development {knowledge.override ?? "to"} {knowledge.used}</h3>
 				</div>
 			))}
 		</div>
