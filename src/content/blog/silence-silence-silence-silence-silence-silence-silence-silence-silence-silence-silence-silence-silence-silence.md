@@ -3,7 +3,7 @@ description: I've been gone for a while, but I've released a package, improved K
 title: The silence, it's deafening
 publishDate: 07 Nov 2021
 image: https://cdn.exerra.xyz/png/icons8/casual-life/clock-and-calendar_512x356.png
-alt: Clock and calendar
+imagealt: Clock and calendar
 ---
 # Where I went
 
