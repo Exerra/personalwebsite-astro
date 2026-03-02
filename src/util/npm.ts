@@ -16,6 +16,7 @@ const getNPMPackages = async () => {
 
         return npmData
     } catch (e) {
+        console.error("Failed to fetch NPM packages:", e)
         return { packages: { objects: [] } }
     }
 }
