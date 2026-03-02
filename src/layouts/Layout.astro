@@ -62,12 +62,41 @@ const { title, description, image } = Astro.props;
 </html>
 
 <style is:inline>
-	@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
 
 	html {
 		font-family: "Inria Sans", sans-serif;
 	}
+
+	.font-display {
+		font-family: "Playfair Display", Georgia, serif;
+	}
+
+	/* Scroll-triggered fade-in animation */
+	.fade-section {
+		opacity: 0;
+		transform: translateY(24px);
+		transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+	}
+	.fade-section.is-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
 </style>
+
+<script is:inline>
+	// Intersection Observer for fade-in sections
+	document.addEventListener("DOMContentLoaded", () => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("is-visible");
+				}
+			});
+		}, { threshold: 0.12 });
+		document.querySelectorAll(".fade-section").forEach(el => observer.observe(el));
+	});
+</script>
 
 <!-- Cal floating-popup embed code begins -->
 <script type="text/javascript">

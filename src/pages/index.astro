@@ -48,7 +48,7 @@ let dates = {
 	</div>
 
 	<Section name="About me">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 fade-section">
 			<div class={"flex flex-wrap gap-6 transition ease-in-out"}>
 				<DarkCard title="Bio">
 					I am a full-stack developer from
@@ -99,7 +99,7 @@ let dates = {
 				/>
 			</div>
 			<div class={`mt-12 mx-8 mb-12 md:mt-24 md:mx-24 lg:mb-0 lg:mt-52 lg:ml-52 lg:mr-0`}>
-				<h2 class="font-bold text-4xl md:text-6xl lg:text-8xl">My projects</h2>
+				<h2 class="font-display font-bold text-4xl md:text-6xl lg:text-8xl tracking-tight">My projects</h2>
 				<p class="mt-10 text-3xl">
 					I've built things ranging from NPM packages, websites, apps, APIs and more.
 					<b>Here are a few of my favourite projects & my NPM packages</b>.
@@ -118,9 +118,9 @@ let dates = {
 			</div>
 		</div>
 
-		<section class="mt-12 mx-8 mb-12 md:mx-24 lg:mx-52">
+		<section class="mt-12 mx-8 mb-12 md:mx-24 lg:mx-52 fade-section">
 			<div>
-				<h3 class="font-bold text-3xl md:text-5xl lg:text-6xl mb-12">Websites & APIs</h3>
+				<h3 class="font-display font-bold text-3xl md:text-5xl lg:text-6xl mb-12">Websites & APIs</h3>
 				<div class={"flex flex-wrap gap-7 text-left"}>
 					{work.map(({ date, name, description, url }) => (
 						<ProjectCard 
@@ -135,7 +135,7 @@ let dates = {
 			</div>
 
 			<div class="mt-24">
-				<h3 class="font-bold text-3xl md:text-5xl lg:text-6xl mb-12">NPM packages</h3>
+				<h3 class="font-display font-bold text-3xl md:text-5xl lg:text-6xl mb-12">NPM packages</h3>
 				<div class={"flex flex-wrap gap-7 text-left"}>
 					{npm.packages.objects.map(({ created, name, description }) => (
 						<ProjectCard 
@@ -152,10 +152,10 @@ let dates = {
 	</section>
 
 	<Section name="Knowledge">
-		<div class={"flex gap-6 flex-wrap"}>
+		<div class={"flex gap-6 flex-wrap fade-section"}>
 			{knowledge.map(knowledge => (
 				<div class={"w-full grow lg:basis-1/5 shadow-2xl bg-grey-card text-beige rounded-[35px] p-6"}>
-					<h2 class="text-3xl font-bold">{knowledge.name}</h2>
+					<h2 class="text-3xl font-display font-bold">{knowledge.name}</h2>
 					<hr class="border-2 border-beige rounded-xl my-2" />
 					<h3 class={"text-lg"}>{knowledge.type} used in development {knowledge.override ?? "to"} {knowledge.used}</h3>
 				</div>
