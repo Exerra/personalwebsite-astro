@@ -22,3 +22,9 @@ pnpm-debug.log*
 # code editors & IDEs
 .vscode
 .idea
+
+# lock files (project uses bun.lockb)
+package-lock.json
+
+# astro generated
+.astro/
