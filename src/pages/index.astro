@@ -137,9 +137,9 @@ let dates = {
 			<div class="mt-24">
 				<h3 class="font-bold text-3xl md:text-5xl lg:text-6xl mb-12">NPM packages</h3>
 				<div class={"flex flex-wrap gap-7 text-left"}>
-					{npm.packages.objects.map(({ created, name, description }) => (
+					{npm.objects.map(({ package: { date, name, description } }) => (
 						<ProjectCard 
-							date={new Date(created.ts).getFullYear()} 
+							date={new Date(date).getFullYear()} 
 							name={name} 
 							description={description} 
 							href={`https://npmjs.com/package/${name}`} 
