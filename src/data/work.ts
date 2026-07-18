@@ -6,17 +6,23 @@ const work = [
 	// 	url: "https://getsummary.tech"
 	// },
 	{
+		date: "Since 2026",
+		name: "Tetàtet",
+		description: "Peace of mind for you and those you love. A check-in safety app that alerts your trusted contacts if you don't check in.",
+		url: "https://tetatet.lv"
+	},
+	{
 		date: "Since 2024",
 		name: "Mastodon to Misskey bridge",
 		description: "Bridge that converts Mastodon API calls to Misskey calls in order to use Mastodon clients. Work in progress.",
 		url: "https://github.com/Exerra/mastodon-to-misskey"
 	},
-	{
-		date: "Since 2024",
-		name: "Daedric World",
-		description: "Elder Scrolls themed federated fediverse instance, Bluesky PDS & fediverse relay. Anyone is welcome to join. Fediverse members get access to the PDS.",
-		url: "https://daedric.world"
-	},
+	// {
+	// 	date: "Since 2024",
+	// 	name: "Daedric World",
+	// 	description: "Elder Scrolls themed federated fediverse instance, Bluesky PDS & fediverse relay. Anyone is welcome to join. Fediverse members get access to the PDS.",
+	// 	url: "https://daedric.world"
+	// },
 	{
 		date: "2023",
 		name: "ChromeOS releases",
@@ -45,7 +51,7 @@ const work = [
 		date: "2022",
 		name: "Phishing API",
 		description: "API for checking if links are known phishing attempts",
-		url: "https://s.exerra.xyz/exerraphishingcheck"
+		url: "https://rapidapi.com/Exerra/api/exerra-phishing-check/details"
 	},
 	// {
 	// 	date: "Since 2019",
